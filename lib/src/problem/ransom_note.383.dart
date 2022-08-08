@@ -32,8 +32,7 @@
 
 class RansomNote {
   bool call(String ransomNote, String magazine) {
-    final list = ransomNote.runes.toList();
-    magazine.runes.forEach(list.remove);
-    return list.isEmpty;
+    final list = magazine.runes.toList();
+    return ransomNote.runes.every(list.remove);
   }
 }
