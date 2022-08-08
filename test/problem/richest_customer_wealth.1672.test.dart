@@ -2,9 +2,11 @@ import 'package:leetcode/src/problem/richest_customer_wealth.1672.dart';
 import 'package:test/test.dart';
 
 void main() => group('richest_customer_wealth.1672', () {
+      final f = RichestCustomerWealth();
+
       test('f([[1,2,3],[3,2,1]])', () {
         expect(
-          RichestCustomerWealth()([
+          f([
             [1, 2, 3],
             [3, 2, 1]
           ]),
@@ -14,7 +16,7 @@ void main() => group('richest_customer_wealth.1672', () {
 
       test('f([[1,5],[7,3],[3,5]])', () {
         expect(
-          RichestCustomerWealth()([
+          f([
             [1, 5],
             [7, 3],
             [3, 5]
@@ -25,7 +27,7 @@ void main() => group('richest_customer_wealth.1672', () {
 
       test('f([[2,8,7],[7,1,3],[1,9,5]])', () {
         expect(
-          RichestCustomerWealth()([
+          f([
             [2, 8, 7],
             [7, 1, 3],
             [1, 9, 5]
