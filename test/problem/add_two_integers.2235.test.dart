@@ -1,4 +1,4 @@
-import 'package:leetcode/src/problems/add_two_integers.2235.dart';
+import 'package:leetcode/src/problem/add_two_integers.2235.dart';
 import 'package:test/test.dart';
 
 void main() => group('add_two_integers.2235', () {

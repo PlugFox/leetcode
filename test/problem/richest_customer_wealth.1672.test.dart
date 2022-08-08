@@ -1,4 +1,4 @@
-import 'package:leetcode/src/problems/richest_customer_wealth.1672.dart';
+import 'package:leetcode/src/problem/richest_customer_wealth.1672.dart';
 import 'package:test/test.dart';
 
 void main() => group('richest_customer_wealth.1672', () {
