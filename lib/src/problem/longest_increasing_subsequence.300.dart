@@ -51,7 +51,7 @@ class LongestIncreasingSubsequence {
       final comp = sortedList[mid].compareTo(value);
       if (comp == 0) {
         return mid;
-      } else if (comp < 0) {
+      } else if (comp.isNegative) {
         min = mid + 1;
       } else {
         max = mid;
