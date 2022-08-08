@@ -34,18 +34,29 @@
  * Follow up: Can you come up with an algorithm that runs in O(n log(n)) time complexity?
  */
 
-import 'dart:math' as math;
-
 class LongestIncreasingSubsequence {
   int call(List<int> nums) {
-    final dp = List<int>.filled(nums.length, 1);
-    for (var i = 1; i < nums.length; i++) {
-      for (var j = 0; j < i; j++) {
-        if (nums[i] > nums[j]) {
-          dp[i] = math.max(dp[i], dp[j] + 1);
-        }
+    final sub = <int>[];
+    for (final n in nums) {
+      final i = _binarySearch(sub, n);
+      i == sub.length ? sub.add(n) : sub[i] = n;
+    }
+    return sub.length;
+  }
+
+  static int _binarySearch<T extends Comparable<Object?>>(List<T> sortedList, T value) {
+    var min = 0, max = sortedList.length;
+    while (min < max) {
+      final mid = min + ((max - min) >> 1);
+      final comp = sortedList[mid].compareTo(value);
+      if (comp == 0) {
+        return mid;
+      } else if (comp < 0) {
+        min = mid + 1;
+      } else {
+        max = mid;
       }
     }
-    return dp.reduce(math.max);
+    return min;
   }
 }
