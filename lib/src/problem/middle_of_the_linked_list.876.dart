@@ -31,19 +31,12 @@ import '../structure/list_node.dart';
 class MiddleOfTheLinkedList {
   ListNode<T>? call<T>(ListNode<T>? head) {
     if (head == null) return null;
-    var result = head;
-    ListNode<T>? node = head;
-    var count = 1;
-    var position = 1;
-    while (true) {
-      node = node?.next;
-      if (node == null) break;
-      count++;
-      if (count.isEven && count ~/ 2 >= position) {
-        result = result.next!;
-        position++;
-      }
+    // ignore: avoid_multiple_declarations_per_line
+    ListNode<T>? slow = head, fast = head;
+    while (fast != null && fast.next != null) {
+      slow = slow?.next;
+      fast = fast.next?.next;
     }
-    return result;
+    return slow;
   }
 }
