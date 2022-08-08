@@ -1,0 +1,13 @@
+{
+  "[dart]": {
+    "editor.defaultFormatter": "Dart-Code.dart-code",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.insertSpaces": true
+  },
+  "dart.lineLength": 120,
+  "editor.rulers": [
+    120
+  ],
+  "dart.doNotFormat": []
+}
