@@ -1,0 +1,46 @@
+import 'package:leetcode/src/problem/merge_sorted_array.88.dart';
+import 'package:test/test.dart';
+
+void main() => group('merge_sorted_array.88', () {
+      final f1 = MergeSortedArrayV1();
+      final f2 = MergeSortedArrayV2();
+
+      test('f([1,2,3,0,0,0], 3, [2,5,6], 3)', () {
+        {
+          final list = [1, 2, 3, 0, 0, 0];
+          f1(list, 3, [2, 5, 6], 3);
+          expect(list, equals([1, 2, 2, 3, 5, 6]));
+        }
+        {
+          final list = [1, 2, 3, 0, 0, 0];
+          f2(list, 3, [2, 5, 6], 3);
+          expect(list, equals([1, 2, 2, 3, 5, 6]));
+        }
+      });
+
+      test('f([1], 1, [], 0)', () {
+        {
+          final list = [1];
+          f1(list, 1, [], 0);
+          expect(list, equals([1]));
+        }
+        {
+          final list = [1];
+          f2(list, 1, [], 0);
+          expect(list, equals([1]));
+        }
+      });
+
+      test('f([0], 0, [1], 1)', () {
+        {
+          final list = [0];
+          f1(list, 0, [1], 1);
+          expect(list, equals([1]));
+        }
+        {
+          final list = [0];
+          f2(list, 0, [1], 1);
+          expect(list, equals([1]));
+        }
+      });
+    });
