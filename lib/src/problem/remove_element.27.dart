@@ -77,27 +77,16 @@ class RemoveElementV1 {
 
 class RemoveElementV2 {
   int call(List<int> nums, int val) {
-    var count = 0;
-    var k = nums.length - 1;
-
-    for (var i = 0; i <= k; i++) {
+    var i = 0, n = nums.length;
+    while (i < n) {
       if (nums[i] != val) {
-        count++;
+        i++;
         continue;
       }
-      for (var j = k; j >= i; j--) {
-        k = j - 1;
-        if (nums[j] == val) {
-          nums[j] = -1;
-          continue;
-        } else if (nums[j] != val) {
-          nums[i] = nums[j];
-          nums[j] = -1;
-          count++;
-          break;
-        }
-      }
+      nums[i] = nums[n - 1];
+      nums[n - 1] = -1;
+      n--;
     }
-    return count;
+    return n;
   }
 }
