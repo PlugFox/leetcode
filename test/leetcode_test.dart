@@ -9,6 +9,7 @@ import 'problem/middle_of_the_linked_list.876.test.dart' as middle_of_the_linked
 import 'problem/number_of_steps_to_reduce_a_number_to_zero.1342.test.dart'
     as number_of_steps_to_reduce_a_number_to_zero_1342_test;
 import 'problem/ransom_note.383.test.dart' as ransom_note_383_test;
+import 'problem/remove_duplicates_from_sorted_array.26.test.dart' as remove_duplicates_from_sorted_array_26_test;
 import 'problem/remove_element.27.test.dart' as remove_element_27_test;
 import 'problem/richest_customer_wealth.1672.test.dart' as richest_customer_wealth_1672_test;
 import 'problem/running_sum_of_1d_array.1480.test.dart' as running_sum_of_1d_array_1480_test;
@@ -30,5 +31,6 @@ void main() {
     duplicate_zeros_1089_test.main();
     squares_of_a_sorted_array_977_test.main();
     remove_element_27_test.main();
+    remove_duplicates_from_sorted_array_26_test.main();
   });
 }
