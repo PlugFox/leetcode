@@ -60,6 +60,7 @@
 
 class RemoveDuplicatesFromSortedArray {
   int call(List<int> nums) {
+    if (nums.isEmpty) return 0;
     var r = 1, p = 1, v = nums[0];
     for (var i = 1; i < nums.length; i++) {
       if (nums[i] != v) {

@@ -4,6 +4,13 @@ import 'package:test/test.dart';
 void main() => group('remove_duplicates_from_sorted_array.26', () {
       final f = RemoveDuplicatesFromSortedArray();
 
+      test('f([])', () {
+        final list = <int>[];
+        final result = f(list);
+        expect(list, isEmpty);
+        expect(result, equals(0));
+      });
+
       test('f([1,1,2])', () {
         final list = <int>[1, 1, 2];
         final result = f(list);
