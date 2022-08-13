@@ -61,20 +61,17 @@
 class RemoveDuplicatesFromSortedArray {
   int call(List<int> nums) {
     if (nums.isEmpty) return 0;
-    var r = 1, p = 1, v = nums[0];
+    var p = 1;
     for (var i = 1; i < nums.length; i++) {
-      if (nums[i] != v) {
-        v = nums[i];
-        if (i != p) {
-          nums[p] = v;
-          nums[i] = 0;
-        }
-        p++;
-        r++;
+      if (nums[i] == nums[p - 1]) {
+        nums[i] = 0;
         continue;
+      } else if (i != p) {
+        nums[p] = nums[i];
+        nums[i] = 0;
       }
-      nums[i] = 0;
+      p++;
     }
-    return r;
+    return p;
   }
 }
