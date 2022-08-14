@@ -1,6 +1,7 @@
 import 'package:test/test.dart';
 
 import 'problem/add_two_integers.2235.test.dart' as add_two_integers_2235_test;
+import 'problem/check_if_n_and_its_double_exist.1346.test.dart' as check_if_n_and_its_double_exist_1346_test;
 import 'problem/duplicate_zeros.1089.test.dart' as duplicate_zeros_1089_test;
 import 'problem/fizz_buzz.412.test.dart' as fizz_buzz_412_test;
 import 'problem/longest_increasing_subsequence.300.test.dart' as longest_increasing_subsequence_300_test;
@@ -32,5 +33,6 @@ void main() {
     squares_of_a_sorted_array_977_test.main();
     remove_element_27_test.main();
     remove_duplicates_from_sorted_array_26_test.main();
+    check_if_n_and_its_double_exist_1346_test.main();
   });
 }
