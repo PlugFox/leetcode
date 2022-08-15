@@ -12,6 +12,8 @@ import 'problem/number_of_steps_to_reduce_a_number_to_zero.1342.test.dart'
 import 'problem/ransom_note.383.test.dart' as ransom_note_383_test;
 import 'problem/remove_duplicates_from_sorted_array.26.test.dart' as remove_duplicates_from_sorted_array_26_test;
 import 'problem/remove_element.27.test.dart' as remove_element_27_test;
+import 'problem/replace_elements_with_greatest_element_on_right_side.1299.test.dart'
+    as replace_elements_with_greatest_element_on_right_side_1299_test;
 import 'problem/richest_customer_wealth.1672.test.dart' as richest_customer_wealth_1672_test;
 import 'problem/running_sum_of_1d_array.1480.test.dart' as running_sum_of_1d_array_1480_test;
 import 'problem/squares_of_a_sorted_array.977.test.dart' as squares_of_a_sorted_array_977_test;
@@ -34,5 +36,6 @@ void main() {
     remove_element_27_test.main();
     remove_duplicates_from_sorted_array_26_test.main();
     check_if_n_and_its_double_exist_1346_test.main();
+    replace_elements_with_greatest_element_on_right_side_1299_test.main();
   });
 }
