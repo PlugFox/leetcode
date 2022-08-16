@@ -7,6 +7,7 @@ import 'problem/fizz_buzz.412.test.dart' as fizz_buzz_412_test;
 import 'problem/longest_increasing_subsequence.300.test.dart' as longest_increasing_subsequence_300_test;
 import 'problem/merge_sorted_array.88.test.dart' as merge_sorted_array_88_test;
 import 'problem/middle_of_the_linked_list.876.test.dart' as middle_of_the_linked_list_876_test;
+import 'problem/move_zeroes.283.test.dart' as move_zeroes_283_test;
 import 'problem/number_of_steps_to_reduce_a_number_to_zero.1342.test.dart'
     as number_of_steps_to_reduce_a_number_to_zero_1342_test;
 import 'problem/ransom_note.383.test.dart' as ransom_note_383_test;
@@ -37,5 +38,6 @@ void main() {
     remove_duplicates_from_sorted_array_26_test.main();
     check_if_n_and_its_double_exist_1346_test.main();
     replace_elements_with_greatest_element_on_right_side_1299_test.main();
+    move_zeroes_283_test.main();
   });
 }
