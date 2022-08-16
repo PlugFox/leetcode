@@ -29,13 +29,16 @@ class MoveZeroes {
   void call(List<int> nums) {
     if (nums.length < 2) return;
 
+    void move(int from, int to) {
+      if (from == to) return;
+      nums[to] = nums[from];
+      nums[from] = 0;
+    }
+
     var p = 0;
     for (var i = 0; i < nums.length; i++) {
       if (nums[i] == 0) continue;
-      if (i != p) {
-        nums[p] = nums[i];
-        nums[i] = 0;
-      }
+      move(i, p);
       p++;
     }
   }
