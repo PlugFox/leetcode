@@ -34,7 +34,7 @@ class SortArrayByParity {
     void swap(int x, int y) {
       if (x == y) return;
       nums[x] = nums[x] ^ nums[y];
-      nums[y] = nums[y] ^ nums[x];
+      nums[y] = nums[x] ^ nums[y];
       nums[x] = nums[x] ^ nums[y];
     }
 
@@ -44,6 +44,7 @@ class SortArrayByParity {
       swap(i, p);
       p++;
     }
+
     return nums;
   }
 }

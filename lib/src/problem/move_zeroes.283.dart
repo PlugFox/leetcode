@@ -29,16 +29,17 @@ class MoveZeroes {
   void call(List<int> nums) {
     if (nums.length < 2) return;
 
-    void move(int from, int to) {
-      if (from == to) return;
-      nums[to] = nums[from];
-      nums[from] = 0;
+    void swap(int x, int y) {
+      if (x == y) return;
+      nums[x] = nums[x] ^ nums[y];
+      nums[y] = nums[x] ^ nums[y];
+      nums[x] = nums[x] ^ nums[y];
     }
 
     var p = 0;
     for (var i = 0; i < nums.length; i++) {
       if (nums[i] == 0) continue;
-      move(i, p);
+      swap(i, p);
       p++;
     }
   }
