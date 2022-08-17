@@ -17,6 +17,7 @@ import 'problem/replace_elements_with_greatest_element_on_right_side.1299.test.d
     as replace_elements_with_greatest_element_on_right_side_1299_test;
 import 'problem/richest_customer_wealth.1672.test.dart' as richest_customer_wealth_1672_test;
 import 'problem/running_sum_of_1d_array.1480.test.dart' as running_sum_of_1d_array_1480_test;
+import 'problem/sort_array_by_parity.905.test.dart' as sort_array_by_parity_905_test;
 import 'problem/squares_of_a_sorted_array.977.test.dart' as squares_of_a_sorted_array_977_test;
 import 'structure/list_node.test.dart' as list_node_test;
 
@@ -39,5 +40,6 @@ void main() {
     check_if_n_and_its_double_exist_1346_test.main();
     replace_elements_with_greatest_element_on_right_side_1299_test.main();
     move_zeroes_283_test.main();
+    sort_array_by_parity_905_test.main();
   });
 }
