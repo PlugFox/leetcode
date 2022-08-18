@@ -51,6 +51,7 @@
 
 class Solution {
   int heightChecker(List<int> heights) {
+    if (heights.length < 2) return 0;
     final tmp = heights.toList(growable: false)..sort();
     var count = 0;
     for (var i = 0; i < heights.length; i++) {
