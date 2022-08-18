@@ -33,8 +33,8 @@
  * 1 <= arr[i] <= 10^5
  */
 
-class ReplaceElementsWithGreatestElementOnRightSide {
-  List<int> call(List<int> arr) {
+class Solution {
+  List<int> replaceElements(List<int> arr) {
     if (arr.isEmpty) return arr;
     final last = arr.length - 1;
     var max = 0;
