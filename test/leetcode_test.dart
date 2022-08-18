@@ -1,5 +1,6 @@
 import 'package:test/test.dart';
 
+import 'problem/1051.height_checker.test.dart' as height_checker;
 import 'problem/1089.duplicate_zeros.test.dart' as duplicate_zeros;
 import 'problem/1299.replace_elements_with_greatest_element_on_right_side.test.dart'
     as replace_elements_with_greatest_element_on_right_side;
@@ -43,5 +44,6 @@ void main() {
     replace_elements_with_greatest_element_on_right_side.main();
     move_zeroes.main();
     sort_array_by_parity.main();
+    height_checker.main();
   });
 }
