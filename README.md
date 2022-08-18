@@ -10,4 +10,6 @@
 - [Profile](https://leetcode.com/PlugFox/)
   
   
-[](https://codecov.io/gh/PlugFox/leetcode/branch/master/graphs/sunburst.svg?token=5yrpQh4j5M)
+## Coverage  
+  
+[![](https://codecov.io/gh/PlugFox/leetcode/branch/master/graphs/sunburst.svg)](https://codecov.io/gh/PlugFox/leetcode/branch/master)  
