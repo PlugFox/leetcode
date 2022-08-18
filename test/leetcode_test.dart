@@ -17,6 +17,7 @@ import 'problem/300.longest_increasing_subsequence.test.dart' as longest_increas
 import 'problem/383.ransom_note.test.dart' as ransom_note;
 import 'problem/412.fizz_buzz.test.dart' as fizz_buzz;
 import 'problem/485.max_consecutive_ones.test.dart' as max_consecutive_ones;
+import 'problem/487.max_consecutive_ones_ii.test.dart' as max_consecutive_ones_ii;
 import 'problem/876.middle_of_the_linked_list.test.dart' as middle_of_the_linked_list;
 import 'problem/88.merge_sorted_array.test.dart' as merge_sorted_array;
 import 'problem/905.sort_array_by_parity.test.dart' as sort_array_by_parity;
@@ -45,5 +46,6 @@ void main() {
     move_zeroes.main();
     sort_array_by_parity.main();
     height_checker.main();
+    max_consecutive_ones_ii.main();
   });
 }
