@@ -27,8 +27,8 @@
  * 0 <= nums[i] <= 5000
  */
 
-class SortArrayByParity {
-  List<int> call(List<int> nums) {
+class Solution {
+  List<int> sortArrayByParity(List<int> nums) {
     if (nums.length < 2) return nums;
 
     void swap(int x, int y) {
