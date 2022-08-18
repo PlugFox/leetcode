@@ -1,7 +1,7 @@
-import 'package:leetcode/src/problem/merge_sorted_array.88.dart';
+import 'package:leetcode/src/problem/88.merge_sorted_array.dart';
 import 'package:test/test.dart';
 
-void main() => group('merge_sorted_array.88', () {
+void main() => group('merge_sorted_array', () {
       final f1 = MergeSortedArrayV1();
       final f2 = MergeSortedArrayV2();
 

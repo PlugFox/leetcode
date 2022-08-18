@@ -1,7 +1,7 @@
-import 'package:leetcode/src/problem/replace_elements_with_greatest_element_on_right_side.1299.dart';
+import 'package:leetcode/src/problem/1299.replace_elements_with_greatest_element_on_right_side.dart';
 import 'package:test/test.dart';
 
-void main() => group('replace_elements_with_greatest_element_on_right_side.1299', () {
+void main() => group('replace_elements_with_greatest_element_on_right_side', () {
       final f = ReplaceElementsWithGreatestElementOnRightSide();
 
       test('f([400])', () {

@@ -1,7 +1,7 @@
-import 'package:leetcode/src/problem/remove_element.27.dart';
+import 'package:leetcode/src/problem/27.remove_element.dart';
 import 'package:test/test.dart';
 
-void main() => group('remove_element.27', () {
+void main() => group('remove_element', () {
       final f1 = RemoveElementV1();
       final f2 = RemoveElementV2();
 

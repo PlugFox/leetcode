@@ -1,7 +1,7 @@
-import 'package:leetcode/src/problem/add_two_integers.2235.dart';
+import 'package:leetcode/src/problem/2235.add_two_integers.dart';
 import 'package:test/test.dart';
 
-void main() => group('add_two_integers.2235', () {
+void main() => group('add_two_integers', () {
       final f = AddTwoIntegers();
 
       test('f(12, 5)', () {

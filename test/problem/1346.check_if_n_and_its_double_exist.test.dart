@@ -1,7 +1,7 @@
-import 'package:leetcode/src/problem/check_if_n_and_its_double_exist.1346.dart';
+import 'package:leetcode/src/problem/1346.check_if_n_and_its_double_exist.dart';
 import 'package:test/test.dart';
 
-void main() => group('check_if_n_and_its_double_exist.1346', () {
+void main() => group('check_if_n_and_its_double_exist', () {
       final f1 = CheckIfNAndItsDoubleExistLinear();
       final f2 = CheckIfNAndItsDoubleExistBinarySearch();
 

@@ -1,7 +1,7 @@
-import 'package:leetcode/src/problem/squares_of_a_sorted_array.977.dart';
+import 'package:leetcode/src/problem/977.squares_of_a_sorted_array.dart';
 import 'package:test/test.dart';
 
-void main() => group('squares_of_a_sorted_array.977', () {
+void main() => group('squares_of_a_sorted_array', () {
       final f = SquaresOfASortedArray();
 
       test('f([-4,-1,0,3,10])', () {

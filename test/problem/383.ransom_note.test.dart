@@ -1,7 +1,7 @@
-import 'package:leetcode/src/problem/ransom_note.383.dart';
+import 'package:leetcode/src/problem/383.ransom_note.dart';
 import 'package:test/test.dart';
 
-void main() => group('ransom_note.383', () {
+void main() => group('ransom_note', () {
       final f = RansomNote();
 
       test('f(a, b)', () {

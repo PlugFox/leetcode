@@ -1,8 +1,8 @@
-import 'package:leetcode/src/problem/middle_of_the_linked_list.876.dart';
+import 'package:leetcode/src/problem/876.middle_of_the_linked_list.dart';
 import 'package:leetcode/src/structure/list_node.dart';
 import 'package:test/test.dart';
 
-void main() => group('middle_of_the_linked_list.876', () {
+void main() => group('middle_of_the_linked_list', () {
       final f = MiddleOfTheLinkedList();
 
       test('f([1, 2, 3, 4, 5])', () {

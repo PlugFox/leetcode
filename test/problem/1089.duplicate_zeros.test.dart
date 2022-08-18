@@ -1,7 +1,7 @@
-import 'package:leetcode/src/problem/duplicate_zeros.1089.dart';
+import 'package:leetcode/src/problem/1089.duplicate_zeros.dart';
 import 'package:test/test.dart';
 
-void main() => group('duplicate_zeros.1089', () {
+void main() => group('duplicate_zeros', () {
       final f = DuplicateZeros();
 
       test('f([1,0,2,3,0,4,5,0])', () {

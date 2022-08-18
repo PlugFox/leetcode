@@ -1,7 +1,7 @@
-import 'package:leetcode/src/problem/number_of_steps_to_reduce_a_number_to_zero.1342.dart';
+import 'package:leetcode/src/problem/1342.number_of_steps_to_reduce_a_number_to_zero.dart';
 import 'package:test/test.dart';
 
-void main() => group('number_of_steps_to_reduce_a_number_to_zero.1342', () {
+void main() => group('number_of_steps_to_reduce_a_number_to_zero', () {
       final f = NumberOfStepsToReduceANumberToZero();
 
       test('f(14)', () {

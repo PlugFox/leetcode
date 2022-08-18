@@ -1,7 +1,7 @@
-import 'package:leetcode/src/problem/sort_array_by_parity.905.dart';
+import 'package:leetcode/src/problem/905.sort_array_by_parity.dart';
 import 'package:test/test.dart';
 
-void main() => group('sort_array_by_parity.905', () {
+void main() => group('sort_array_by_parity', () {
       final f = SortArrayByParity();
 
       test('f([3,1,2,4])', () {
