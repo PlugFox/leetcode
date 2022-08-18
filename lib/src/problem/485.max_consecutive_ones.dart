@@ -32,10 +32,10 @@ class Solution {
     for (var i = 0; i < nums.length; i++) {
       if (nums[i] == 1) {
         cur++;
-      } else {
-        max = math.max<int>(max, cur);
-        cur = 0;
+        continue;
       }
+      max = math.max<int>(max, cur);
+      cur = 0;
     }
     return math.max<int>(max, cur);
   }
