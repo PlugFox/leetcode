@@ -1,8 +1,8 @@
-class ListNode<T> {
-  ListNode(this.val, [this.next]);
+class ListNode<T> extends Iterable<T> {
+  ListNode(this.value, [this.next]);
 
-  factory ListNode.of(Iterable<T> list) {
-    final iterator = list.iterator;
+  factory ListNode.of(Iterable<T> collection) {
+    final iterator = collection.iterator;
     if (!iterator.moveNext()) throw Exception('Empty collection');
     final head = ListNode<T>(iterator.current);
     var node = head;
@@ -12,33 +12,56 @@ class ListNode<T> {
     return head;
   }
 
-  final T val;
+  final T value;
 
   ListNode<T>? next;
 
+  @override
+  Iterator<T> get iterator => _ListNodeIterator<T>(this);
+
   Iterable<T> toIterable() sync* {
     ListNode<T>? node = this;
-    yield val;
+    yield value;
     while (true) {
       node = node?.next;
       if (node == null) break;
-      yield node.val;
+      yield node.value;
     }
   }
-
-  List<T> toList() => toIterable().toList();
 
   @override
   String toString() {
     ListNode<T>? node = this;
-    final buffer = StringBuffer('( ')..write(node.val);
+    final buffer = StringBuffer('(')..write(node.value);
     while (true) {
       node = node?.next;
       if (node == null) break;
       buffer
         ..write(', ')
-        ..write(node.val);
+        ..write(node.value);
     }
-    return (buffer..write(' )')).toString();
+    return (buffer..write(')')).toString();
+  }
+}
+
+class _ListNodeIterator<T> implements Iterator<T> {
+  _ListNodeIterator(ListNode<T> node) : _node = node;
+
+  bool _head = true;
+  ListNode<T> _node;
+
+  @override
+  T get current => _node.value;
+
+  @override
+  @pragma('vm:prefer-inline')
+  bool moveNext() {
+    final next = _head ? _node : _node.next;
+    _head = false;
+    if (next == null) {
+      return false;
+    }
+    _node = next;
+    return true;
   }
 }
