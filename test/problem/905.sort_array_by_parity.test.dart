@@ -13,6 +13,10 @@ void main() => group('sort_array_by_parity', () {
         expect(f([1, 1, 0, 1, 0, 0, 1]), containsAllInOrder(<int>[0, 0, 0, 1, 1, 1, 1]));
       });
 
+      test('f([0,0,1,1,0,0,1])', () {
+        expect(f([0, 0, 1, 1, 0, 0, 1]), containsAllInOrder(<int>[0, 0, 0, 0, 1, 1, 1]));
+      });
+
       test('f([0])', () {
         expect(f([0]), equals([0]));
       });
