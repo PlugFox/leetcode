@@ -1,5 +1,6 @@
 import 'package:test/test.dart';
 
+import 'problem/485.max_consecutive_ones.test.dart' as max_consecutive_ones;
 import 'problem/add_two_integers.2235.test.dart' as add_two_integers_2235_test;
 import 'problem/check_if_n_and_its_double_exist.1346.test.dart' as check_if_n_and_its_double_exist_1346_test;
 import 'problem/duplicate_zeros.1089.test.dart' as duplicate_zeros_1089_test;
@@ -24,6 +25,7 @@ import 'structure/list_node.test.dart' as list_node_test;
 void main() {
   group('structure', list_node_test.main);
   group('problems', () {
+    max_consecutive_ones.main();
     add_two_integers_2235_test.main();
     richest_customer_wealth_1672_test.main();
     running_sum_of_1d_array_1480_test.main();
