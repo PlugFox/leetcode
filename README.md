@@ -1,7 +1,9 @@
 # LeetCode Dart solutions. 
   
 [![CHECKOUT](https://github.com/PlugFox/leetcode/actions/workflows/checkout.yml/badge.svg?branch=master)](https://github.com/PlugFox/leetcode/actions/workflows/checkout.yml)
-[![codecov](https://codecov.io/gh/PlugFox/leetcode/branch/master/graph/badge.svg?token=5yrpQh4j5M)](https://codecov.io/gh/PlugFox/leetcode)  
+[![codecov](https://codecov.io/gh/PlugFox/leetcode/branch/master/graph/badge.svg?token=5yrpQh4j5M)](https://codecov.io/gh/PlugFox/leetcode)
+[![Code size](https://img.shields.io/github/languages/code-size/plugfox/leetcode?logo=github&logoColor=white)](https://github.com/plugfox/leetcode)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   
   
 - [LeetCode](https://leetcode.com/)
