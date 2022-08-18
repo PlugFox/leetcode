@@ -54,30 +54,25 @@ jobs:
         run: export PUB_CACHE=$PWD/.pub_cache/
 
       - name: 👷 Install Dependencies
-        run: dart pub get
         timeout-minutes: 1
+        run: dart pub get
 
       - name: 🔎 Check format
+        timeout-minutes: 1
         run: dart format --set-exit-if-changed -l 120 -o none .
-        timeout-minutes: 1
 
-      - name: 🏗️ Check analyzer
+      - name: 📈 Check analyzer
+        timeout-minutes: 1
         run: dart analyze --fatal-infos --fatal-warnings lib
-        timeout-minutes: 1
-
-      #- name: 📈 Check with pana
-      #  run: dart pub global activate pana && pana --json --no-warning --line-length 120
 
       - name: 🧪 Run tests
-        run: dart test --concurrency=6 --platform vm --coverage=coverage test/
         timeout-minutes: 2
+        run: |
+          dart run coverage:test_with_coverage -fb -o coverage -- \
+            --concurrency=6 --platform vm --coverage=./coverage --reporter=expanded test/leetcode_test.dart
 
-      #- name: 📶 Collect coverage
-      #  run: dart run coverage:format_coverage --lcov --in=coverage --out=coverage/lcov.info --packages=.packages --report-on=lib
-      #  timeout-minutes: 1
-
-      #- name: 📁 Upload coverage to Codecov
-      #  uses: codecov/codecov-action@v2.1.0
-      #  timeout-minutes: 1
-      #  with:
-      #    token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+      - name: 📥 Upload coverage to Codecov
+        timeout-minutes: 1
+        uses: codecov/codecov-action@v2.1.0
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos

@@ -1,4 +1,5 @@
 .PHONY: test
 
-test:
-	@dart test --concurrency=6 --coverage=./coverage --reporter=expanded test/leetcode_test.dart
+test: get
+	@dart run coverage:test_with_coverage -fb -o coverage -- \
+		--concurrency=6 --coverage=./coverage --reporter=expanded test/leetcode_test.dart
