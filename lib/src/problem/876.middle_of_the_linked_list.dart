@@ -28,10 +28,10 @@
 
 import '../structure/list_node.dart';
 
-class MiddleOfTheLinkedList {
-  ListNode<T>? call<T>(ListNode<T>? head) {
+class Solution {
+  ListNode? middleNode(ListNode? head) {
     if (head == null) return null;
-    ListNode<T>? slow = head, fast = head;
+    ListNode? slow = head, fast = head;
     while (fast != null && fast.next != null) {
       slow = slow?.next;
       fast = fast.next?.next;
