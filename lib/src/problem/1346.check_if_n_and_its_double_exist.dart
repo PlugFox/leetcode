@@ -38,8 +38,8 @@
  * -10^3 <= arr[i] <= 10^3
  */
 
-class CheckIfNAndItsDoubleExistLinear {
-  bool call(List<int> arr) {
+class Solution {
+  bool checkIfExist(List<int> arr) {
     if (arr.length < 2) return false;
     for (var i = 0; i < arr.length - 1; i++) {
       final x = arr[i] * 2, y = arr[i] / 2;
@@ -61,69 +61,5 @@ class CheckIfNAndItsDoubleExistLinear {
       }
     }
     return false;
-  }
-}
-
-class CheckIfNAndItsDoubleExistBinarySearch {
-  bool call(List<int> arr) {
-    if (arr.length < 2) return false;
-    final list = arr.toList(growable: false)..sort();
-    final length = list.length;
-
-    final firstPositive = () {
-      for (var i = 0; i < length; i++) {
-        if (list[i] > 0) return i;
-      }
-      return null;
-    }();
-    int? prev;
-
-    // Positive iteration
-    if (firstPositive != null) {
-      final iterateTo = length - 1;
-      for (var i = firstPositive; i < iterateTo; i++) {
-        if (list[i] == prev) continue;
-        if (_binarySearch(list, list[i] * 2, from: i + 1, to: length) != null) {
-          return true;
-        }
-        prev = list[i];
-      }
-    }
-
-    // Negative iteration
-    if (firstPositive != 0) {
-      for (var i = (firstPositive ?? length) - 1; i > 0; i--) {
-        if (list[i] == prev) continue;
-        if (_binarySearch(list, list[i] * 2, from: 0, to: i) != null) {
-          return true;
-        }
-        prev = list[i];
-      }
-    }
-
-    return false;
-  }
-
-  static int? _binarySearch<T extends Comparable<Object?>>(
-    List<T> list,
-    T value, {
-    int? from,
-    int? to,
-    int Function(T, T)? compare,
-  }) {
-    var min = from ?? 0, max = to ?? list.length;
-    compare ??= (a, b) => a.compareTo(b);
-    while (min < max) {
-      final mid = min + ((max - min) >> 1);
-      final comp = compare(list[mid], value);
-      if (comp == 0) {
-        return mid;
-      } else if (comp.isNegative) {
-        min = mid + 1;
-      } else {
-        max = mid;
-      }
-    }
-    return null;
   }
 }
