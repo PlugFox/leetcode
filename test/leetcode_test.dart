@@ -2,6 +2,7 @@ import 'package:test/test.dart';
 
 import 'problem/1051.height_checker.test.dart' as height_checker;
 import 'problem/1089.duplicate_zeros.test.dart' as duplicate_zeros;
+import 'problem/1295.find_numbers_with_even_number_of_digits.test.dart' as find_numbers_with_even_number_of_digits;
 import 'problem/1299.replace_elements_with_greatest_element_on_right_side.test.dart'
     as replace_elements_with_greatest_element_on_right_side;
 import 'problem/1342.number_of_steps_to_reduce_a_number_to_zero.test.dart'
@@ -28,6 +29,7 @@ void main() {
   group('structure', list_node_test.main);
   group('problems', () {
     max_consecutive_ones.main();
+    find_numbers_with_even_number_of_digits.main();
     add_two_integers.main();
     richest_customer_wealth.main();
     running_sum_of_1d_array.main();
