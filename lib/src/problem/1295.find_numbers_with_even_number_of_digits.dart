@@ -35,8 +35,7 @@ class Solution {
   int findNumbers(List<int> nums) {
     var count = 0;
     for (var i = 0; i < nums.length; i++) {
-      var j = 0;
-      var n = nums[i];
+      var j = 0, n = nums[i];
       do {
         j++;
         n ~/= 10;
