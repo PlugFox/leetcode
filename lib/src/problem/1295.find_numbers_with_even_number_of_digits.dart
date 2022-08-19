@@ -31,16 +31,21 @@
  * 1 <= nums[i] <= 105
  */
 
+import 'dart:math' as math;
+
 class Solution {
   int findNumbers(List<int> nums) {
     var count = 0;
     for (var i = 0; i < nums.length; i++) {
+      /*
       var j = 0, n = nums[i];
       do {
         j++;
         n ~/= 10;
       } while (n > 0);
-      if (j.isOdd) continue;
+      if (n.isOdd) continue;
+      */
+      if ((math.log(nums[i] + 1) ~/ math.ln10 + 1) % 2 != 0) continue;
       count++;
     }
     return count;
