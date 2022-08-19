@@ -69,12 +69,12 @@ linter:
     library_private_types_in_public_api: false
     prefer_final_parameters: false
     avoid_types_on_closure_parameters: false
+    use_is_even_rather_than_modulo: false
 
     # Enabled
     prefer_relative_imports: true
     sort_constructors_first: true
     use_named_constants: true
-    use_is_even_rather_than_modulo: true
     unnecessary_await_in_return: true
     tighten_type_of_initializing_formals: true
     exhaustive_cases: true

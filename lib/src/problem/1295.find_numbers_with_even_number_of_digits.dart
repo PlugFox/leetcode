@@ -33,21 +33,22 @@
 
 import 'dart:math' as math;
 
-class Solution {
+class SolutionV1 {
   int findNumbers(List<int> nums) {
     var count = 0;
     for (var i = 0; i < nums.length; i++) {
-      /*
       var j = 0, n = nums[i];
       do {
         j++;
         n ~/= 10;
       } while (n > 0);
-      if (n.isOdd) continue;
-      */
-      if ((math.log(nums[i] + 1) ~/ math.ln10 + 1) % 2 != 0) continue;
+      if (j.isOdd) continue;
       count++;
     }
     return count;
   }
+}
+
+class SolutionV2 {
+  int findNumbers(List<int> nums) => nums.where((n) => (math.log(n + 1) ~/ math.ln10 + 1) % 2 == 0).length;
 }
