@@ -33,15 +33,14 @@
 
 class Solution {
   int findNumbers(List<int> nums) {
-    if (nums.isEmpty) return 0;
     var count = 0;
     for (var i = 0; i < nums.length; i++) {
       var j = 0;
-      var num = nums[i];
+      var n = nums[i];
       do {
         j++;
-        num ~/= 10;
-      } while (num > 0);
+        n ~/= 10;
+      } while (n > 0);
       if (j.isOdd) continue;
       count++;
     }
