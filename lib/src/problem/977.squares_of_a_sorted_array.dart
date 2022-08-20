@@ -21,8 +21,8 @@
  * 
  * Constraints:
  * 
- * 1 <= nums.length <= 104
- * -104 <= nums[i] <= 104
+ * 1 <= nums.length <= 10^4
+ * -10^4 <= nums[i] <= 10^4
  * nums is sorted in non-decreasing order.
  *  
  * 
@@ -30,8 +30,8 @@
  * could you find an O(n) solution using a different approach?
  */
 
-class SquaresOfASortedArray {
-  List<int> call(List<int> nums) {
+class Solution {
+  List<int> sortedSquares(List<int> nums) {
     final result = List<int>.filled(nums.length, 0, growable: false);
     final length = nums.length;
     var left = 0, right = length - 1;
