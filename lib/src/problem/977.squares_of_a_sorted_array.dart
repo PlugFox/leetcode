@@ -33,9 +33,8 @@
 class Solution {
   List<int> sortedSquares(List<int> nums) {
     final result = List<int>.filled(nums.length, 0, growable: false);
-    final length = nums.length;
-    var left = 0, right = length - 1;
-    for (var i = length - 1; i >= 0; i--) {
+    var left = 0, right = nums.length - 1;
+    for (var i = right; i >= 0; i--) {
       int n;
       if (nums[left].abs() < nums[right].abs()) {
         n = nums[right];
