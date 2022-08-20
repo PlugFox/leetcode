@@ -15,4 +15,8 @@ void main() => group('third_maximum_number', () {
       test('f([2,2,3,1])', () {
         expect(f([2, 2, 3, 1]), equals(1));
       });
+
+      test('f([])', () {
+        expect(() => f([]), throwsArgumentError);
+      });
     });
