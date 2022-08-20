@@ -28,18 +28,16 @@
  * 0 <= arr[i] <= 9
  */
 
-class DuplicateZeros {
-  void call(List<int> arr) {
-    final length = arr.length;
-
+class Solution {
+  void duplicateZeros(List<int> arr) {
     void shift(int pos) {
-      assert(pos < length, 'position is out of range');
-      for (var i = length - 1; i > pos; i--) {
+      assert(pos > 0 && pos < arr.length, 'Position is out of range');
+      for (var i = arr.length - 1; i > pos; i--) {
         arr[i] = arr[i - 1];
       }
     }
 
-    for (var i = 0; i < length - 1; i++) {
+    for (var i = 0; i < arr.length - 1; i++) {
       if (arr[i] != 0) continue;
       shift(i + 1);
       arr[i + 1] = 0;
