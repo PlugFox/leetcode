@@ -46,12 +46,11 @@
 
 class Solution {
   int thirdMax(List<int> nums) {
-    if (nums.isEmpty) throw ArgumentError.value(nums, 'nums', 'Array should contain at least one number');
-    const maximusCount = 3;
-    final maximus = List<int?>.filled(maximusCount, null, growable: false);
+    const maximusLength = 3;
+    final maximus = List<int?>.filled(maximusLength, null, growable: false);
     for (var i = 0; i < nums.length; i++) {
       var n = nums[i];
-      for (var j = 0; j < maximusCount; j++) {
+      for (var j = 0; j < maximusLength; j++) {
         final m = maximus[j];
         if (m == null) {
           maximus[j] = n;
@@ -65,7 +64,8 @@ class Solution {
         }
       }
     }
-
-    return maximus.last == null ? maximus.first! : maximus.last!;
+    return maximus.last ??
+        maximus.first ??
+        (throw ArgumentError.value(nums, 'nums', 'Array should contain at least one number'));
   }
 }
