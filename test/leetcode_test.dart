@@ -22,6 +22,7 @@ import 'problem/487.max_consecutive_ones_ii.test.dart' as max_consecutive_ones_i
 import 'problem/876.middle_of_the_linked_list.test.dart' as middle_of_the_linked_list;
 import 'problem/88.merge_sorted_array.test.dart' as merge_sorted_array;
 import 'problem/905.sort_array_by_parity.test.dart' as sort_array_by_parity;
+import 'problem/941.valid_mountain_array.test.dart' as valid_mountain_array;
 import 'problem/977.squares_of_a_sorted_array.test.dart' as squares_of_a_sorted_array;
 import 'structure/list_node.test.dart' as list_node_test;
 
@@ -30,6 +31,7 @@ void main() {
   group('problems', () {
     max_consecutive_ones.main();
     find_numbers_with_even_number_of_digits.main();
+    valid_mountain_array.main();
     add_two_integers.main();
     richest_customer_wealth.main();
     running_sum_of_1d_array.main();
