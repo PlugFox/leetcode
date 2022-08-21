@@ -2,8 +2,8 @@ import 'package:leetcode/src/problem/88.merge_sorted_array.dart';
 import 'package:test/test.dart';
 
 void main() => group('merge_sorted_array', () {
-      final f1 = MergeSortedArrayV1();
-      final f2 = MergeSortedArrayV2();
+      final f1 = SolutionV1().merge;
+      final f2 = SolutionV2().merge;
 
       test('f([1,2,3,0,0,0], 3, [2,5,6], 3)', () {
         {
