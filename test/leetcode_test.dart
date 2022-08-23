@@ -21,6 +21,7 @@ import 'problem/414.third_maximum_number.test.dart' as third_maximum_number;
 import 'problem/448.find_all_numbers_disappeared_in_an_array.test.dart' as find_all_numbers_disappeared_in_an_array;
 import 'problem/485.max_consecutive_ones.test.dart' as max_consecutive_ones;
 import 'problem/487.max_consecutive_ones_ii.test.dart' as max_consecutive_ones_ii;
+import 'problem/707.design_linked_list.test.dart' as design_linked_list;
 import 'problem/876.middle_of_the_linked_list.test.dart' as middle_of_the_linked_list;
 import 'problem/88.merge_sorted_array.test.dart' as merge_sorted_array;
 import 'problem/905.sort_array_by_parity.test.dart' as sort_array_by_parity;
@@ -55,5 +56,6 @@ void main() {
     max_consecutive_ones_ii.main();
     third_maximum_number.main();
     find_all_numbers_disappeared_in_an_array.main();
+    design_linked_list.main();
   });
 }
