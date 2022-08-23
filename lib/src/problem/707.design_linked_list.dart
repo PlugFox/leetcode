@@ -79,7 +79,7 @@ class MyLinkedList {
   }
 
   void addAtIndex(int index, int val) {
-    if (index == 0) return addAtHead(val);
+    if (index < 1) return addAtHead(val);
     final node = _nodeAt(index - 1);
     node?.next = _Node()
       ..val = val

@@ -38,6 +38,21 @@ void main() => group('design_linked_list', () {
         expect(list.get(1), equals(3));
       });
 
+      test('get_out_of_range', () {
+        expect(list.get(-1), equals(-1));
+        expect(list.get(9), equals(-1));
+      });
+
+      test('deleteAtIndex_head', () {
+        expect(() => list.deleteAtIndex(0), returnsNormally);
+        expect(list.get(0), equals(2));
+      });
+
+      test('addAtIndex_head', () {
+        expect(() => list.addAtIndex(0, 9), returnsNormally);
+        expect(list.get(0), equals(9));
+      });
+
       test('reverse_add', () {
         final list = MyLinkedList()
           ..addAtHead(1)
