@@ -74,14 +74,12 @@ class MyLinkedList {
       _node = _Node()..val = val;
       return;
     }
-    while (node!.next != null) {
-      node = node.next;
-    }
+    while (node!.next != null) node = node.next;
     node.next = _Node()..val = val;
   }
 
   void addAtIndex(int index, int val) {
-    if (index < 1) return addAtHead(val);
+    if (index == 0) return addAtHead(val);
     final node = _nodeAt(index - 1);
     node?.next = _Node()
       ..val = val
