@@ -50,18 +50,19 @@
  */
 
 class MyLinkedList {
-  MyLinkedList();
-
   _Node? _node;
 
-  int get(int index) {
+  _Node? _nodeAt(int index) {
+    if (index < 0) return null;
     var node = _node;
     for (var i = 0; i < index; i++) {
-      if (node == null) return -1;
+      if (node == null) return null;
       node = node.next;
     }
-    return node?.val ?? -1;
+    return node;
   }
+
+  int get(int index) => _nodeAt(index)?.val ?? -1;
 
   void addAtHead(int val) => _node = _Node()
     ..val = val
@@ -81,13 +82,8 @@ class MyLinkedList {
 
   void addAtIndex(int index, int val) {
     if (index < 1) return addAtHead(val);
-    var node = _node;
-    for (var i = 1; i < index; i++) {
-      if (node == null) return;
-      node = node.next;
-    }
-    if (node == null) return;
-    node.next = _Node()
+    final node = _nodeAt(index - 1);
+    node?.next = _Node()
       ..val = val
       ..next = node.next;
   }
@@ -97,13 +93,8 @@ class MyLinkedList {
       _node = _node?.next;
       return;
     }
-    var node = _node;
-    for (var i = 1; i < index; i++) {
-      if (node == null) return;
-      node = node.next;
-    }
-    if (node == null) return;
-    node.next = node.next?.next;
+    final node = _nodeAt(index - 1);
+    node?.next = node.next?.next;
   }
 }
 
