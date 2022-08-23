@@ -2,7 +2,7 @@ import 'package:leetcode/src/problem/26.remove_duplicates_from_sorted_array.dart
 import 'package:test/test.dart';
 
 void main() => group('remove_duplicates_from_sorted_array', () {
-      final f = RemoveDuplicatesFromSortedArray();
+      final f = Solution().removeDuplicates;
 
       test('f([])', () {
         final list = <int>[];

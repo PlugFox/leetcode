@@ -58,8 +58,8 @@
  * nums is sorted in non-decreasing order.
  */
 
-class RemoveDuplicatesFromSortedArray {
-  int call(List<int> nums) {
+class Solution {
+  int removeDuplicates(List<int> nums) {
     if (nums.isEmpty) return 0;
     var p = 1;
     for (var i = 1; i < nums.length; i++) {
