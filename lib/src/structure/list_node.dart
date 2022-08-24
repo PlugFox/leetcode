@@ -1,5 +1,5 @@
 class ListNode<T> extends Iterable<T> {
-  ListNode(this.value, [this.next]);
+  ListNode(this.val, [this.next]);
 
   factory ListNode.of(Iterable<T> collection) {
     final iterator = collection.iterator;
@@ -12,7 +12,7 @@ class ListNode<T> extends Iterable<T> {
     return head;
   }
 
-  final T value;
+  final T val;
 
   ListNode<T>? next;
 
@@ -21,24 +21,24 @@ class ListNode<T> extends Iterable<T> {
 
   Iterable<T> toIterable() sync* {
     ListNode<T>? node = this;
-    yield value;
+    yield val;
     while (true) {
       node = node?.next;
       if (node == null) break;
-      yield node.value;
+      yield node.val;
     }
   }
 
   @override
   String toString() {
     ListNode<T>? node = this;
-    final buffer = StringBuffer('(')..write(node.value);
+    final buffer = StringBuffer('(')..write(node.val);
     while (true) {
       node = node?.next;
       if (node == null) break;
       buffer
         ..write(', ')
-        ..write(node.value);
+        ..write(node.val);
     }
     return (buffer..write(')')).toString();
   }
@@ -51,7 +51,7 @@ class _ListNodeIterator<T> implements Iterator<T> {
   ListNode<T> _node;
 
   @override
-  T get current => _node.value;
+  T get current => _node.val;
 
   @override
   @pragma('vm:prefer-inline')

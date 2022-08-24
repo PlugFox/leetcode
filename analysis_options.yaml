@@ -71,6 +71,7 @@ linter:
     avoid_types_on_closure_parameters: false
     use_is_even_rather_than_modulo: false
     curly_braces_in_flow_control_structures: false
+    parameter_assignments: false
 
     # Enabled
     prefer_relative_imports: true
@@ -113,7 +114,6 @@ linter:
     overridden_fields: true
     package_names: true
     package_prefixed_library_names: true
-    parameter_assignments: true
     prefer_asserts_in_initializer_lists: true
     prefer_asserts_with_message: true
     prefer_const_constructors: true

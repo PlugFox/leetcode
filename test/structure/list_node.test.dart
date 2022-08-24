@@ -5,7 +5,7 @@ void main() => group('list_node', () {
       test('create', () {
         expect(() => ListNode<int>(1), returnsNormally);
         expect(ListNode<int>(1), isA<ListNode<int>>());
-        expect(ListNode<int>(1).value, equals(1));
+        expect(ListNode<int>(1).val, equals(1));
       });
 
       test('list', () {

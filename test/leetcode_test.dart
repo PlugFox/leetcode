@@ -10,6 +10,7 @@ import 'problem/1342.number_of_steps_to_reduce_a_number_to_zero.test.dart'
 import 'problem/1346.check_if_n_and_its_double_exist.test.dart' as check_if_n_and_its_double_exist;
 import 'problem/1480.running_sum_of_1d_array.test.dart' as running_sum_of_1d_array;
 import 'problem/1672.richest_customer_wealth.test.dart' as richest_customer_wealth;
+import 'problem/19.remove_nth_node_from_end_of_list.test.dart' as remove_nth_node_from_end_of_list;
 import 'problem/2235.add_two_integers.test.dart' as add_two_integers;
 import 'problem/26.remove_duplicates_from_sorted_array.test.dart' as remove_duplicates_from_sorted_array;
 import 'problem/27.remove_element.test.dart' as remove_element;
@@ -57,5 +58,6 @@ void main() {
     third_maximum_number.main();
     find_all_numbers_disappeared_in_an_array.main();
     design_linked_list.main();
+    remove_nth_node_from_end_of_list.main();
   });
 }
