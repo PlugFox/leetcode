@@ -55,10 +55,7 @@ class MyLinkedList {
   _Node? _nodeAt(int index) {
     if (index < 0) return null;
     var node = _node;
-    for (var i = 0; i < index; i++) {
-      if (node == null) return null;
-      node = node.next;
-    }
+    for (var i = 0; i < index && node != null; i++) node = node.next;
     return node;
   }
 
