@@ -2,7 +2,7 @@ import 'package:leetcode/src/problem/1342.number_of_steps_to_reduce_a_number_to_
 import 'package:test/test.dart';
 
 void main() => group('number_of_steps_to_reduce_a_number_to_zero', () {
-      final f = NumberOfStepsToReduceANumberToZero();
+      final f = Solution().numberOfSteps;
 
       test('f(14)', () {
         expect(f(14), equals(6));
