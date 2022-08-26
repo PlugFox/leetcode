@@ -36,7 +36,7 @@ class SolutionV1 {
     final lettersCodeOffset = 'a'.codeUnits.first, lettersCount = 26;
     final indexes = List<int>.filled(lettersCount, 0, growable: false);
     int getIndex(String char) => indexes[char.codeUnitAt(0) - lettersCodeOffset];
-    int setIndex(String char, int index) => indexes[char.codeUnitAt(0) - lettersCodeOffset] = index;
+    void setIndex(String char, int index) => indexes[char.codeUnitAt(0) - lettersCodeOffset] = index;
     for (var i = 0; i < ransomNote.length; i++) {
       final index = magazine.indexOf(ransomNote[i], getIndex(ransomNote[i]));
       if (index == -1) return false;
