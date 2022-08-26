@@ -23,6 +23,6 @@
  * -100 <= num1, num2 <= 100
  */
 
-class AddTwoIntegers {
-  int call(int num1, int num2) => num1 + num2;
+class Solution {
+  int sum(int num1, int num2) => num1 + num2;
 }
