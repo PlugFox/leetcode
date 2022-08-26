@@ -36,7 +36,8 @@
 class Solution {
   List<int> replaceElements(List<int> arr) {
     if (arr.isEmpty) return arr;
-    var max = 0, last = arr.length - 1;
+    final last = arr.length - 1;
+    var max = 0;
     for (var i = 0; i < last; i++) {
       if (max == i) {
         max = i + 1;
