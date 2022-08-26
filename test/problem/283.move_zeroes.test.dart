@@ -2,7 +2,7 @@ import 'package:leetcode/src/problem/283.move_zeroes.dart';
 import 'package:test/test.dart';
 
 void main() => group('move_zeroes', () {
-      final moveZeroes = MoveZeroes();
+      final moveZeroes = Solution().moveZeroes;
       List<int> f(List<int> list) {
         moveZeroes(list);
         return list;

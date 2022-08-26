@@ -25,8 +25,8 @@
  * -2^31 <= nums[i] <= 2^31 - 1
  */
 
-class MoveZeroes {
-  void call(List<int> nums) {
+class Solution {
+  void moveZeroes(List<int> nums) {
     if (nums.length < 2) return;
 
     void swap(int x, int y) {
