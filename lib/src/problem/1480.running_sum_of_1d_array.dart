@@ -32,8 +32,8 @@
  * -10^6 <= nums[i] <= 10^6
  */
 
-class RunningSumOf1DArray {
-  List<int> call(List<int> nums) => List<int>.of(
+class Solution {
+  List<int> runningSum(List<int> nums) => List<int>.of(
         () sync* {
           var prev = 0;
           for (var i = 0; i < nums.length; i++) {

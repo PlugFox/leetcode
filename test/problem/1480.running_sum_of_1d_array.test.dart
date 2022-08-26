@@ -2,7 +2,7 @@ import 'package:leetcode/src/problem/1480.running_sum_of_1d_array.dart';
 import 'package:test/test.dart';
 
 void main() => group('running_sum_of_1d_array', () {
-      final f = RunningSumOf1DArray();
+      final f = Solution().runningSum;
 
       test('f([1,2,3,4])', () {
         expect(
