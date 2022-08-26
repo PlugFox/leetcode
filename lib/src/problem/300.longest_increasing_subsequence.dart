@@ -34,8 +34,8 @@
  * Follow up: Can you come up with an algorithm that runs in O(n log(n)) time complexity?
  */
 
-class LongestIncreasingSubsequence {
-  int call(List<int> nums) {
+class Solution {
+  int lengthOfLIS(List<int> nums) {
     final sub = <int>[];
     for (final n in nums) {
       final i = _binarySearch(sub, n);

@@ -2,7 +2,7 @@ import 'package:leetcode/src/problem/300.longest_increasing_subsequence.dart';
 import 'package:test/test.dart';
 
 void main() => group('longest_increasing_subsequence', () {
-      final f = LongestIncreasingSubsequence();
+      final f = Solution().lengthOfLIS;
 
       test('f([10,9,2,5,3,7,101,18])', () {
         expect(f([10, 9, 2, 5, 3, 7, 101, 18]), equals(4));
