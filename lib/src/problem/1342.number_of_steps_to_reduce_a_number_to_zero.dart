@@ -3,8 +3,8 @@
  * 
  * Given an integer num, return the number of steps to reduce it to zero.
  * 
- * In one step, if the current number is even, you have to divide it by 2, otherwise, you have to subtract 1 from it.
- * 
+ * In one step, if the current number is even, you have to divide it by 2,
+ * otherwise, you have to subtract 1 from it.
  *  
  * 
  * Example 1:
@@ -42,14 +42,10 @@
  * 0 <= num <= 10^6
  */
 
-class NumberOfStepsToReduceANumberToZero {
-  int call(int num) {
+class Solution {
+  int numberOfSteps(int num) {
     var i = 0;
-    while (num != 0) {
-      // ignore: parameter_assignments
-      num.isEven ? num ~/= 2 : num--;
-      i++;
-    }
+    for (; num != 0; i++) num.isEven ? num ~/= 2 : num--;
     return i;
   }
 }
