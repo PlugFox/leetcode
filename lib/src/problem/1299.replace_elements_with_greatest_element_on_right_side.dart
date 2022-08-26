@@ -36,20 +36,14 @@
 class Solution {
   List<int> replaceElements(List<int> arr) {
     if (arr.isEmpty) return arr;
-    final last = arr.length - 1;
-    var max = 0;
+    var max = 0, last = arr.length - 1;
     for (var i = 0; i < last; i++) {
       if (max == i) {
         max = i + 1;
-        for (var j = i + 2; j <= last; j++) {
-          if (arr[j] >= arr[max]) {
-            max = j;
-          }
-        }
+        for (var j = i + 2; j <= last; j++) if (arr[j] >= arr[max]) max = j;
       }
       arr[i] = arr[max];
     }
-    arr[last] = -1;
-    return arr;
+    return arr..[last] = -1;
   }
 }
