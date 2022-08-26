@@ -2,7 +2,7 @@ import 'package:leetcode/src/problem/412.fizz_buzz.dart';
 import 'package:test/test.dart';
 
 void main() => group('fizz_buzz', () {
-      final f = FizzBuzz();
+      final f = Solution().fizzBuzz;
 
       test('f(3)', () {
         expect(f(3), equals(['1', '2', 'Fizz']));

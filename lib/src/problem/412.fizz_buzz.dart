@@ -32,8 +32,8 @@
  * 1 <= n <= 10^4
  */
 
-class FizzBuzz {
-  List<String> call(int n) => List<String>.generate(n, (idx) {
+class Solution {
+  List<String> fizzBuzz(int n) => List<String>.generate(n, (idx) {
         final x = idx + 1;
         final buffer = StringBuffer();
         if (x % 3 == 0) buffer.write('Fizz');
