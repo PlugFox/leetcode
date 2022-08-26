@@ -31,7 +31,7 @@
  * ransomNote and magazine consist of lowercase English letters.
  */
 
-class Solution {
+class SolutionV1 {
   bool canConstruct(String ransomNote, String magazine) {
     final lettersCodeOffset = 'a'.codeUnits.first, lettersCount = 26;
     final indexes = List<int>.filled(lettersCount, 0, growable: false);
@@ -42,6 +42,19 @@ class Solution {
       if (index == -1) return false;
       setIndex(ransomNote[i], index + 1);
     }
+    return true;
+  }
+}
+
+class SolutionV2 {
+  bool canConstruct(String ransomNote, String magazine) {
+    final lettersCodeOffset = 'a'.codeUnits.first, lettersCount = 26;
+    final ransomNoteLettersCount = List<int>.filled(lettersCount, 0, growable: false);
+    final magazineLettersCount = List<int>.filled(lettersCount, 0, growable: false);
+    void inc(List<int> list, String char) => list[char.codeUnitAt(0) - lettersCodeOffset]++;
+    for (var i = 0; i < ransomNote.length; i++) inc(ransomNoteLettersCount, ransomNote[i]);
+    for (var i = 0; i < magazine.length; i++) inc(magazineLettersCount, magazine[i]);
+    for (var i = 0; i < lettersCount; i++) if (magazineLettersCount[i] < ransomNoteLettersCount[i]) return false;
     return true;
   }
 }
