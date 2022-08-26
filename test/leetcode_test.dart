@@ -11,6 +11,7 @@ import 'problem/1346.check_if_n_and_its_double_exist.test.dart' as check_if_n_an
 import 'problem/1480.running_sum_of_1d_array.test.dart' as running_sum_of_1d_array;
 import 'problem/1672.richest_customer_wealth.test.dart' as richest_customer_wealth;
 import 'problem/19.remove_nth_node_from_end_of_list.test.dart' as remove_nth_node_from_end_of_list;
+import 'problem/203.remove_linked_list_elements.test.dart' as remove_linked_list_elements;
 import 'problem/206.reverse_linked_list.test.dart' as reverse_linked_list;
 import 'problem/2235.add_two_integers.test.dart' as add_two_integers;
 import 'problem/26.remove_duplicates_from_sorted_array.test.dart' as remove_duplicates_from_sorted_array;
@@ -61,5 +62,6 @@ void main() {
     design_linked_list.main();
     remove_nth_node_from_end_of_list.main();
     reverse_linked_list.main();
+    remove_linked_list_elements.main();
   });
 }
