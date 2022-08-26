@@ -2,7 +2,7 @@ import 'package:leetcode/src/problem/383.ransom_note.dart';
 import 'package:test/test.dart';
 
 void main() => group('ransom_note', () {
-      final f = RansomNote();
+      final f = Solution().canConstruct;
 
       test('f(a, b)', () {
         expect(f('a', 'b'), isFalse);
