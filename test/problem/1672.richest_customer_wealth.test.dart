@@ -2,7 +2,7 @@ import 'package:leetcode/src/problem/1672.richest_customer_wealth.dart';
 import 'package:test/test.dart';
 
 void main() => group('richest_customer_wealth', () {
-      final f = RichestCustomerWealth();
+      final f = Solution().maximumWealth;
 
       test('f([[1,2,3],[3,2,1]])', () {
         expect(

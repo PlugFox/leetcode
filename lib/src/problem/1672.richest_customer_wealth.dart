@@ -1,9 +1,12 @@
 /*
  * 1672. Richest Customer Wealth
  * 
- * You are given an m x n integer grid accounts where accounts[i][j] is the amount of money the i^​​​​​​​​​​​th​​​​ customer has in the j​​​​​​​​​​^​th​​​​ bank. Return the wealth that the richest customer has.
+ * You are given an m x n integer grid accounts where accounts[i][j]
+ * is the amount of money the i^​​​​​​​​​​​th​​​​ customer has in the j​​​​​​​​​​^​th​​​​ bank.
+ * Return the wealth that the richest customer has.
  * 
- * A customer's wealth is the amount of money they have in all their bank accounts. The richest customer is the customer that has the maximum wealth.
+ * A customer's wealth is the amount of money they have in all their bank accounts.
+ * The richest customer is the customer that has the maximum wealth.
  * 
  * 
  * Example 1:
@@ -43,9 +46,16 @@
 
 import 'dart:math' as math;
 
-class RichestCustomerWealth {
-  static int _sum(List<int> list) => list.fold<int>(0, (s, e) => s + e);
-
-  /// Richest Customer Wealth
-  int call(List<List<int>> accounts) => accounts.map<int>(_sum).reduce(math.max);
+class Solution {
+  int maximumWealth(List<List<int>> accounts) {
+    var maximum = 0;
+    for (var i = 0; i < accounts.length; i++) {
+      var sum = 0;
+      for (var j = 0; j < accounts[i].length; j++) {
+        sum += accounts[i][j];
+      }
+      maximum = math.max(maximum, sum);
+    }
+    return maximum;
+  }
 }
