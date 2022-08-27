@@ -41,18 +41,16 @@ class Solution {
     final head2 = head?.next;
     if (head == null || head2 == null) return head;
     var ptr1 = head, ptr2 = head2;
-    ListNode? tmp;
     while (true) {
-      tmp = ptr2.next;
-      ptr1.next = tmp;
-      if (tmp == null) break;
-      ptr1 = tmp;
-      tmp = ptr1.next;
-      ptr2.next = tmp;
-      if (tmp == null) break;
-      ptr2 = tmp;
+      ptr1.next = ptr2.next;
+      if (ptr1.next == null) break;
+      ptr1 = ptr1.next!;
+      ptr2.next = ptr1.next;
+      if (ptr2.next == null) break;
+      ptr2 = ptr2.next!;
     }
     ptr1.next = head2;
+    ptr2.next = null;
     return head;
   }
 }
