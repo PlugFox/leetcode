@@ -60,7 +60,6 @@
 
 class Solution {
   int removeDuplicates(List<int> nums) {
-    if (nums.isEmpty) return 0;
     var p = 1;
     for (var i = 1; i < nums.length; i++) {
       if (nums[i] == nums[p - 1]) {
