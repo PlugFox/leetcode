@@ -18,6 +18,7 @@ import 'problem/26.remove_duplicates_from_sorted_array.test.dart' as remove_dupl
 import 'problem/27.remove_element.test.dart' as remove_element;
 import 'problem/283.move_zeroes.test.dart' as move_zeroes;
 import 'problem/300.longest_increasing_subsequence.test.dart' as longest_increasing_subsequence;
+import 'problem/328.odd_even_linked_list.test.dart' as odd_even_linked_list;
 import 'problem/383.ransom_note.test.dart' as ransom_note;
 import 'problem/412.fizz_buzz.test.dart' as fizz_buzz;
 import 'problem/414.third_maximum_number.test.dart' as third_maximum_number;
@@ -63,5 +64,6 @@ void main() {
     remove_nth_node_from_end_of_list.main();
     reverse_linked_list.main();
     remove_linked_list_elements.main();
+    odd_even_linked_list.main();
   });
 }
