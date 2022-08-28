@@ -32,10 +32,9 @@ import '../structure/list_node.dart';
 
 class Solution {
   bool isPalindrome(ListNode? head) {
-    final buffer = StringBuffer();
-    for (var cursor = head; cursor != null; cursor = cursor.next) buffer.write(cursor.val.toString());
-    final string = buffer.toString();
-    for (var i = 0; i < string.length ~/ 2; i++) if (string[i] != string[string.length - i - 1]) return false;
+    final buffer = <Object?>[];
+    for (var cursor = head; cursor != null; cursor = cursor.next) buffer.add(cursor.val.toString());
+    for (var i = 0; i < buffer.length ~/ 2; i++) if (buffer[i] != buffer[buffer.length - i - 1]) return false;
     return true;
   }
 }
