@@ -2,7 +2,7 @@ import 'package:leetcode/src/problem/206.reverse_linked_list.dart';
 import 'package:leetcode/src/structure/list_node.dart';
 import 'package:test/test.dart';
 
-void main() => group('remove_duplicates_from_sorted_array', () {
+void main() => group('reverse_linked_list', () {
       final f = Solution().reverseList;
 
       test('f([])', () {

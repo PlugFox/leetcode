@@ -50,50 +50,60 @@
  */
 
 class MyLinkedList {
-  _Node? _node;
+  _Node? _head;
 
   _Node? _nodeAt(int index) {
     if (index < 0) return null;
-    var node = _node;
+    var node = _head;
     for (var i = 0; i < index && node != null; i++) node = node.next;
     return node;
   }
 
   int get(int index) => _nodeAt(index)?.val ?? -1;
 
-  void addAtHead(int val) => _node = _Node()
-    ..val = val
-    ..next = _node;
+  void addAtHead(int val) {
+    _head = _Node()
+      ..val = val
+      ..prev = null
+      ..next = _head;
+    _head?.next?.prev = _head;
+  }
 
   void addAtTail(int val) {
-    var node = _node;
-    if (node == null) {
-      _node = _Node()..val = val;
-      return;
-    }
+    var node = _head;
+    if (node == null) return addAtHead(val);
     while (node!.next != null) node = node.next;
-    node.next = _Node()..val = val;
+    node.next = _Node()
+      ..val = val
+      ..prev = node
+      ..next = null;
   }
 
   void addAtIndex(int index, int val) {
     if (index < 1) return addAtHead(val);
     final node = _nodeAt(index - 1);
-    node?.next = _Node()
+    if (node == null) return addAtTail(val);
+    final newNode = _Node()
       ..val = val
+      ..prev = node
       ..next = node.next;
+    node.next?.prev = newNode;
+    node.next = newNode;
   }
 
   void deleteAtIndex(int index) {
     if (index == 0) {
-      _node = _node?.next;
+      _head = _head?.next;
       return;
     }
     final node = _nodeAt(index - 1);
-    node?.next = node.next?.next;
+    if (node == null) return;
+    node.next = node.next?.next;
+    node.next?.prev = node;
   }
 }
 
 class _Node {
   int val = 0;
-  _Node? next;
+  _Node? prev, next;
 }
