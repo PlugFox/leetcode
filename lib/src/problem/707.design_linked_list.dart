@@ -82,7 +82,7 @@ class MyLinkedList {
   void addAtIndex(int index, int val) {
     if (index < 1) return addAtHead(val);
     final node = _nodeAt(index - 1);
-    if (node == null) return addAtTail(val);
+    if (node == null) return;
     final newNode = _Node()
       ..val = val
       ..prev = node

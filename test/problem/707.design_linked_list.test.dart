@@ -62,4 +62,9 @@ void main() => group('design_linked_list', () {
         expect(list.get(1), equals(2));
         expect(list.get(2), equals(1));
       });
+
+      test('addAtIndex_and_get', () {
+        final list = MyLinkedList()..addAtIndex(1, 0);
+        expect(list.get(0), equals(-1));
+      });
     });
