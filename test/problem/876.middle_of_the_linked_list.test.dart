@@ -10,10 +10,10 @@ void main() => group('middle_of_the_linked_list', () {
       });
 
       test('f([1, 2, 3, 4, 5])', () {
-        expect(f(ListNode<int>.of([1, 2, 3, 4, 5])), orderedEquals(<int>[3, 4, 5]));
+        expect(f(ListNode.of([1, 2, 3, 4, 5])), orderedEquals(<int>[3, 4, 5]));
       });
 
       test('f([1, 2, 3, 4, 5, 6])', () {
-        expect(f(ListNode<int>.of([1, 2, 3, 4, 5, 6])), orderedEquals(<int>[4, 5, 6]));
+        expect(f(ListNode.of([1, 2, 3, 4, 5, 6])), orderedEquals(<int>[4, 5, 6]));
       });
     });

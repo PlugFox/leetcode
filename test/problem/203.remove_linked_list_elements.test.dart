@@ -10,10 +10,10 @@ void main() => group('remove_linked_list_elements', () {
       });
 
       test('f([7,7,7,7], 7)', () {
-        expect(f(ListNode<int>.of(<int>[7, 7, 7, 7]), 7), isNull);
+        expect(f(ListNode.of(<int>[7, 7, 7, 7]), 7), isNull);
       });
 
       test('f([1,2,6,3,4,5,6], 6)', () {
-        expect(f(ListNode<int>.of(<int>[1, 2, 6, 3, 4, 5, 6]), 6)?.toList(), equals([1, 2, 3, 4, 5]));
+        expect(f(ListNode.of(<int>[1, 2, 6, 3, 4, 5, 6]), 6)?.toList(), equals([1, 2, 3, 4, 5]));
       });
     });

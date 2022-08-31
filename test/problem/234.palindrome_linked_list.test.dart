@@ -10,22 +10,22 @@ void main() => group('palindrome_linked_list', () {
       });
 
       test('f([1])', () {
-        expect(f(ListNode<int>.of(<int>[1])), isTrue);
+        expect(f(ListNode.of(<int>[1])), isTrue);
       });
 
       test('f([1,2])', () {
-        expect(f(ListNode<int>.of(<int>[1, 2])), isFalse);
+        expect(f(ListNode.of(<int>[1, 2])), isFalse);
       });
 
       test('f([1,2,1])', () {
-        expect(f(ListNode<int>.of(<int>[1, 2, 1])), isTrue);
+        expect(f(ListNode.of(<int>[1, 2, 1])), isTrue);
       });
 
       test('f([1,2,1,4])', () {
-        expect(f(ListNode<int>.of(<int>[1, 2, 1, 4])), isFalse);
+        expect(f(ListNode.of(<int>[1, 2, 1, 4])), isFalse);
       });
 
       test('f([1, 2, 2, 1])', () {
-        expect(f(ListNode<int>.of(<int>[1, 2, 2, 1])), isTrue);
+        expect(f(ListNode.of(<int>[1, 2, 2, 1])), isTrue);
       });
     });

@@ -13,6 +13,7 @@ import 'problem/1672.richest_customer_wealth.test.dart' as richest_customer_weal
 import 'problem/19.remove_nth_node_from_end_of_list.test.dart' as remove_nth_node_from_end_of_list;
 import 'problem/203.remove_linked_list_elements.test.dart' as remove_linked_list_elements;
 import 'problem/206.reverse_linked_list.test.dart' as reverse_linked_list;
+import 'problem/21.merge_two_sorted_lists.test.dart' as merge_two_sorted_lists;
 import 'problem/2235.add_two_integers.test.dart' as add_two_integers;
 import 'problem/234.palindrome_linked_list.test.dart' as palindrome_linked_list;
 import 'problem/26.remove_duplicates_from_sorted_array.test.dart' as remove_duplicates_from_sorted_array;
@@ -67,5 +68,6 @@ void main() {
     remove_linked_list_elements.main();
     odd_even_linked_list.main();
     palindrome_linked_list.main();
+    merge_two_sorted_lists.main();
   });
 }
