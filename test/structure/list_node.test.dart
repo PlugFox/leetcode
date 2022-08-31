@@ -9,7 +9,7 @@ void main() => group('list_node', () {
       });
 
       test('toIterable', () {
-        expect(ListNode.of(<int>[1, 2, 3]).toIterable(), containsAllInOrder(<int>[1, 2, 3]));
+        expect(ListNode.of(<int>[1, 2, 3]).toIterable().toList(), containsAllInOrder(<int>[1, 2, 3]));
       });
 
       test('list', () {
