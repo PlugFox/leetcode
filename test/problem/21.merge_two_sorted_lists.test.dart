@@ -60,6 +60,11 @@ void main() => group('merge_two_sorted_lists', () {
         expect(f2(null, ListNode.of(<int>[0]))?.toList(), equals([0]));
       });
 
+      test('f([0], [])', () {
+        expect(f1(ListNode.of(<int>[0]), null)?.toList(), equals([0]));
+        expect(f2(ListNode.of(<int>[0]), null)?.toList(), equals([0]));
+      });
+
       test('f([-10,-10,-9,-4,1,6,6], [-7])', () {
         expect(
           f1(ListNode.of(<int>[-10, -10, -9, -4, 1, 6, 6]), ListNode.of(<int>[-7]))?.toList(),

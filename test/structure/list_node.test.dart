@@ -8,6 +8,10 @@ void main() => group('list_node', () {
         expect(ListNode(1).val, equals(1));
       });
 
+      test('toIterable', () {
+        expect(ListNode.of(<int>[1, 2, 3]).toIterable(), containsAllInOrder(<int>[1, 2, 3]));
+      });
+
       test('list', () {
         expect(ListNode.of(<int>[1, 2, 3]), containsAllInOrder(<int>[1, 2, 3]));
       });

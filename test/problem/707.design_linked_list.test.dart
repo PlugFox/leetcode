@@ -67,4 +67,11 @@ void main() => group('design_linked_list', () {
         final list = MyLinkedList()..addAtIndex(1, 0);
         expect(list.get(0), equals(-1));
       });
+
+      test('delete_negative_index', () {
+        final list = MyLinkedList()
+          ..addAtIndex(1, 0)
+          ..deleteAtIndex(-10);
+        expect(list.get(0), equals(-1));
+      });
     });
