@@ -37,32 +37,19 @@
 import '../structure/list_node.dart';
 
 class Solution {
-  ListNode? mergeTwoLists(ListNode? list1, ListNode? list2) {
+  ListNode? mergeTwoLists(ListNode? node1, ListNode? node2) {
     final newHead = ListNode(0);
-    var ptr1 = list1, ptr2 = list2;
-    ListNode getNext() {
-      ListNode next;
-      if (ptr1 == null && ptr2 == null) {
-        throw Exception();
-      } else if (ptr1 == null) {
-        next = ptr2!;
-        ptr2 = ptr2!.next;
-      } else if (ptr2 == null) {
-        next = ptr1!;
-        ptr1 = ptr1!.next;
-      } else if (ptr1!.val > ptr2!.val) {
-        next = ptr2!;
-        ptr2 = ptr2!.next;
+    var prev = newHead;
+    while (node1 != null && node2 != null) {
+      if (node1.val > node2.val) {
+        prev = prev.next = node2;
+        node2 = node2.next;
       } else {
-        next = ptr1!;
-        ptr1 = ptr1!.next;
+        prev = prev.next = node1;
+        node1 = node1.next;
       }
-      return next;
     }
-
-    for (var ptr = newHead; ptr1 != null || ptr2 != null;) {
-      ptr = ptr.next = getNext();
-    }
+    prev.next = node1 ?? node2;
     return newHead.next;
   }
 }
