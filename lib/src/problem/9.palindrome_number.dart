@@ -41,10 +41,10 @@
 class Solution {
   bool isPalindrome(int x) {
     if (x == 0) return true;
-    if (x < 0 || x % 10 == 0) return false;
-    final string = x.toString();
-    final middle = string.length / 2;
-    for (var i = 0; i < middle; i++) if (string[i] != string[string.length - i - 1]) return false;
+    if (x.isNegative || x % 10 == 0) return false;
+    final chars = x.toString().codeUnits;
+    final length = chars.length, middle = chars.length / 2;
+    for (var i = 0; i < middle; i++) if (chars[i] != chars[length - i - 1]) return false;
     return true;
   }
 }

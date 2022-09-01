@@ -4,12 +4,20 @@ import 'package:test/test.dart';
 void main() => group('palindrome_number', () {
       final f = Solution().isPalindrome;
 
+      test('f(0)', () {
+        expect(f(0), isTrue);
+      });
+
       test('f(121)', () {
         expect(f(121), isTrue);
       });
 
       test('f(-121)', () {
         expect(f(-121), isFalse);
+      });
+
+      test('f(11)', () {
+        expect(f(11), isTrue);
       });
 
       test('f(1001)', () {
