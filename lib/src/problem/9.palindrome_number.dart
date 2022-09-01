@@ -40,7 +40,8 @@
 
 class Solution {
   bool isPalindrome(int x) {
-    if (x < 0) return false;
+    if (x == 0) return true;
+    if (x < 0 && x % 10 == 0) return false;
     final string = x.toString();
     final middle = string.length / 2;
     for (var i = 0; i < middle; i++) if (string[i] != string[string.length - i - 1]) return false;
