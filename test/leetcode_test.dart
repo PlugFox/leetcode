@@ -30,6 +30,7 @@ import 'problem/487.max_consecutive_ones_ii.test.dart' as max_consecutive_ones_i
 import 'problem/707.design_linked_list.test.dart' as design_linked_list;
 import 'problem/876.middle_of_the_linked_list.test.dart' as middle_of_the_linked_list;
 import 'problem/88.merge_sorted_array.test.dart' as merge_sorted_array;
+import 'problem/9.palindrome_number.test.dart' as palindrome_number;
 import 'problem/905.sort_array_by_parity.test.dart' as sort_array_by_parity;
 import 'problem/941.valid_mountain_array.test.dart' as valid_mountain_array;
 import 'problem/977.squares_of_a_sorted_array.test.dart' as squares_of_a_sorted_array;
@@ -69,5 +70,6 @@ void main() {
     odd_even_linked_list.main();
     palindrome_linked_list.main();
     merge_two_sorted_lists.main();
+    palindrome_number.main();
   });
 }
