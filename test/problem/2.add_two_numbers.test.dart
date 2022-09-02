@@ -2,7 +2,7 @@ import 'package:leetcode/src/problem/2.add_two_numbers.dart';
 import 'package:leetcode/src/structure/list_node.dart';
 import 'package:test/test.dart';
 
-void main() => group('palindrome_number', () {
+void main() => group('add_two_numbers', () {
       final f = Solution().addTwoNumbers;
 
       test('f(null,null)', () {
