@@ -36,31 +36,25 @@
  * It is guaranteed that the list represents a number that does not have leading zeros.
  */
 
-import 'dart:math' as math;
-
 import '../structure/list_node.dart';
 
 class Solution {
   ListNode? addTwoNumbers(ListNode? l1, ListNode? l2) {
     if (l1 == null) return l2;
     if (l2 == null) return l1;
-    var n = _getNumber(l1) + _getNumber(l2);
-    final result = ListNode(n - (n ~/ 10) * 10);
-    var ptr = result;
-    n ~/= 10;
-    while (n > 0) {
-      ptr = ptr.next = ListNode(n - (n ~/ 10) * 10);
-      n ~/= 10;
+    final dummyHead = ListNode(0);
+    var curr = dummyHead;
+    var carry = 0;
+    while (l1 != null || l2 != null || carry != 0) {
+      final x = (l1 != null) ? l1.val : 0;
+      final y = (l2 != null) ? l2.val : 0;
+      final sum = carry + x + y;
+      carry = sum ~/ 10;
+      curr.next = ListNode(sum % 10);
+      curr = curr.next!;
+      if (l1 != null) l1 = l1.next;
+      if (l2 != null) l2 = l2.next;
     }
-    return result;
-  }
-
-  static int _getNumber(ListNode? l) {
-    var n = 0;
-    for (var i = 0; l != null; i++) {
-      n += l.val * math.pow(10, i).truncate();
-      l = l.next;
-    }
-    return n;
+    return dummyHead.next;
   }
 }
