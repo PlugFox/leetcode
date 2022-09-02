@@ -40,7 +40,7 @@
 
 class Solution {
   bool isPalindrome(int x) {
-    if (x > 0 && x < 10) return true;
+    if (x > -1 && x < 10) return true;
     if (x.isNegative || x % 10 == 0) return false;
     final chars = x.toString().codeUnits;
     final length = chars.length, middle = chars.length / 2;
