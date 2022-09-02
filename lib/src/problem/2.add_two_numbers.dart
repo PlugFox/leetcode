@@ -55,7 +55,7 @@ class Solution {
     return result;
   }
 
-  int _getNumber(ListNode? l) {
+  static int _getNumber(ListNode? l) {
     var n = 0;
     for (var i = 0; l != null; i++) {
       n += l.val * math.pow(10, i).truncate();
