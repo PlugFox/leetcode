@@ -40,20 +40,16 @@ import '../structure/list_node.dart';
 
 class Solution {
   ListNode? addTwoNumbers(ListNode? l1, ListNode? l2) {
-    if (l1 == null) return l2;
-    if (l2 == null) return l1;
+    if (l1 == null || l2 == null) return l1 ?? l2;
     final dummyHead = ListNode(0);
     var curr = dummyHead;
-    var carry = 0;
+    var carry = 0, sum = 0;
     while (l1 != null || l2 != null || carry != 0) {
-      final x = (l1 != null) ? l1.val : 0;
-      final y = (l2 != null) ? l2.val : 0;
-      final sum = carry + x + y;
+      sum = carry + ((l1 != null) ? l1.val : 0) + ((l2 != null) ? l2.val : 0);
       carry = sum ~/ 10;
-      curr.next = ListNode(sum % 10);
-      curr = curr.next!;
-      if (l1 != null) l1 = l1.next;
-      if (l2 != null) l2 = l2.next;
+      curr = curr.next = ListNode(sum % 10);
+      l1 = l1?.next;
+      l2 = l2?.next;
     }
     return dummyHead.next;
   }
