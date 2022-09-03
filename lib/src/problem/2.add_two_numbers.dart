@@ -42,12 +42,10 @@ class Solution {
   ListNode? addTwoNumbers(ListNode? l1, ListNode? l2) {
     if (l1 == null || l2 == null) return l1 ?? l2;
     final dummyHead = ListNode(0);
-    var curr = dummyHead;
     var carry = 0, sum = 0;
-    while (l1 != null || l2 != null || carry != 0) {
+    for (var curr = dummyHead; l1 != null || l2 != null || carry != 0; curr = curr.next = ListNode(sum % 10)) {
       sum = carry + ((l1 != null) ? l1.val : 0) + ((l2 != null) ? l2.val : 0);
       carry = sum ~/ 10;
-      curr = curr.next = ListNode(sum % 10);
       l1 = l1?.next;
       l2 = l2?.next;
     }
