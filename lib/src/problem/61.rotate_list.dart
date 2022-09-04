@@ -24,6 +24,8 @@
 
 import '../structure/list_node.dart';
 
+/// Implementation via recursion,
+/// but be aware that this threatens to overflow the call stack.
 class Solution {
   ListNode? rotateRight(ListNode? head, int k) {
     if (head == null || k < 1) return head;
