@@ -31,18 +31,9 @@ class Solution {
     var length = 0;
     void rotate(ListNode node) {
       length++;
-      if (node.next != null)
-        rotate(node.next!);
-      else
-        k %= length;
-      if (k == 0) {
-        node.next = null;
-        k--;
-        return;
-      } else if (k < 0) {
-        return;
-      }
-      head = node..next = head;
+      node.next != null ? rotate(node.next!) : k %= length;
+      if (k > 0) head = node..next = head;
+      if (k == 0) node.next = null;
       k--;
     }
 
