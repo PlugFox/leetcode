@@ -6,6 +6,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 In this repository, I post solutions to LeetCode problems on Dart.
+The repository also contains the structures necessary for solving problems on LeetCode.
 
 - [LeetCode](https://leetcode.com/)
 - [Explore](https://leetcode.com/explore/)
