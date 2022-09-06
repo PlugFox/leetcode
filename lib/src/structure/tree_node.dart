@@ -3,9 +3,9 @@ import 'dart:convert';
 class TreeNode {
   TreeNode([this.val = 0, this.left, this.right]);
 
-  static TreeNode? of(List<int?> list) {
-    if (list.isEmpty || list.first == null) return null;
-    final iterator = list.iterator..moveNext();
+  static TreeNode? of(Iterable<int?> collection) {
+    final iterator = collection.iterator;
+    if (!iterator.moveNext() || iterator.current == null) return null;
     final head = TreeNode(iterator.current!);
     var queue = <TreeNode>[head];
     while (true) {
