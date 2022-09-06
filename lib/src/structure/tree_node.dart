@@ -41,7 +41,7 @@ class TreeNode {
       if (newQueue.isEmpty) {
         var last = list.length - 1;
         for (; last >= 0; last--) if (list[last] != null) break;
-        return list.take(last + 1).toList();
+        return list.sublist(0, last + 1);
       }
       queue = newQueue;
     }
