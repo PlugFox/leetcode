@@ -31,10 +31,9 @@ class TreeNode {
     while (queue.isNotEmpty) {
       final newQueue = <TreeNode>[];
       for (final node in queue) {
-        final left = node.left, right = node.right;
-        list.addAll([left?.val, right?.val]);
-        if (left != null) newQueue.add(left);
-        if (right != null) newQueue.add(right);
+        list.addAll([node.left?.val, node.right?.val]);
+        if (node.left != null) newQueue.add(node.left!);
+        if (node.right != null) newQueue.add(node.right!);
       }
       queue = newQueue;
     }
