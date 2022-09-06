@@ -1,9 +1,9 @@
 class ListNode extends Iterable<int> {
   ListNode(this.val, [this.next]);
 
-  factory ListNode.of(Iterable<int> collection) {
+  static ListNode? of(Iterable<int> collection) {
     final iterator = collection.iterator;
-    if (!iterator.moveNext()) throw Exception('Empty collection');
+    if (!iterator.moveNext()) return null;
     final head = ListNode(iterator.current);
     var node = head;
     while (iterator.moveNext()) {
@@ -12,22 +12,13 @@ class ListNode extends Iterable<int> {
     return head;
   }
 
-  final int val;
-
+  int val;
   ListNode? next;
 
   @override
   Iterator<int> get iterator => _ListNodeIterator(this);
 
-  Iterable toIterable() sync* {
-    ListNode? node = this;
-    yield val;
-    while (true) {
-      node = node?.next;
-      if (node == null) break;
-      yield node.val;
-    }
-  }
+  List<Object?> toJson() => toList();
 
   @override
   String toString() {
