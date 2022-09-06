@@ -37,10 +37,14 @@ import 'problem/9.palindrome_number.test.dart' as palindrome_number;
 import 'problem/905.sort_array_by_parity.test.dart' as sort_array_by_parity;
 import 'problem/941.valid_mountain_array.test.dart' as valid_mountain_array;
 import 'problem/977.squares_of_a_sorted_array.test.dart' as squares_of_a_sorted_array;
-import 'structure/list_node.test.dart' as list_node_test;
+import 'structure/list_node.test.dart' as list_node;
+import 'structure/tree_node.test.dart' as tree_node;
 
 void main() {
-  group('structure', list_node_test.main);
+  group('structure', () {
+    list_node.main();
+    tree_node.main();
+  });
   group('problems', () {
     max_consecutive_ones.main();
     find_numbers_with_even_number_of_digits.main();
