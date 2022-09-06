@@ -7,8 +7,7 @@ class TreeNode {
     final iterator = collection.iterator;
     if (!iterator.moveNext() || iterator.current == null) return null;
     final head = TreeNode(iterator.current!);
-    var queue = <TreeNode>[head];
-    while (queue.isNotEmpty) {
+    for (var queue = <TreeNode>[head]; queue.isNotEmpty;) {
       final newQueue = <TreeNode>[];
       for (final node in queue) {
         if (!iterator.moveNext()) return head;
@@ -27,8 +26,7 @@ class TreeNode {
 
   List<int?> toList() {
     final list = <int?>[val];
-    var queue = <TreeNode>[this];
-    while (queue.isNotEmpty) {
+    for (var queue = <TreeNode>[this]; queue.isNotEmpty;) {
       final newQueue = <TreeNode>[];
       for (final node in queue) {
         list.addAll([node.left?.val, node.right?.val]);
