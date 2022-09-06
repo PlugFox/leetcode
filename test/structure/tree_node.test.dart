@@ -30,6 +30,10 @@ void main() => group('tree_node', () {
           TreeNode.of([5, 4, 7, 3, null, 2, null, -1, null, 9])?.toList(),
           equals([5, 4, 7, 3, null, 2, null, -1, null, 9]),
         );
+        expect(
+          TreeNode.of([1, 2, 3, null, null, 6, 7])?.toList(),
+          equals([1, 2, 3, null, null, 6, 7]),
+        );
       });
 
       test('toJson', () {

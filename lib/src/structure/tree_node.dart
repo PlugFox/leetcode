@@ -39,11 +39,9 @@ class TreeNode {
         if (right != null) newQueue.add(right);
       }
       if (newQueue.isEmpty) {
-        for (var i = list.length - 1; i >= 0; i--) {
-          if (list[i] != null) break;
-          list.removeAt(i);
-        }
-        return list;
+        var last = list.length - 1;
+        for (; last >= 0; last--) if (list[last] != null) break;
+        return list.take(last + 1).toList();
       }
       queue = newQueue;
     }
