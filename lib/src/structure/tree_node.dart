@@ -28,23 +28,19 @@ class TreeNode {
   List<int?> toList() {
     final list = <int?>[val];
     var queue = <TreeNode>[this];
-    while (true) {
+    while (queue.isNotEmpty) {
       final newQueue = <TreeNode>[];
       for (final node in queue) {
         final left = node.left, right = node.right;
-        list
-          ..add(left?.val)
-          ..add(right?.val);
+        list.addAll([left?.val, right?.val]);
         if (left != null) newQueue.add(left);
         if (right != null) newQueue.add(right);
       }
-      if (newQueue.isEmpty) {
-        var last = list.length - 1;
-        for (; last >= 0; last--) if (list[last] != null) break;
-        return list.sublist(0, last + 1);
-      }
       queue = newQueue;
     }
+    var last = list.length - 1;
+    for (; last >= 0; last--) if (list[last] != null) break;
+    return list.sublist(0, last + 1);
   }
 
   Map<String, Object?> toJson() => <String, Object?>{
