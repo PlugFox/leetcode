@@ -8,7 +8,7 @@ class TreeNode {
     if (!iterator.moveNext() || iterator.current == null) return null;
     final head = TreeNode(iterator.current!);
     var queue = <TreeNode>[head];
-    while (true) {
+    while (queue.isNotEmpty) {
       final newQueue = <TreeNode>[];
       for (final node in queue) {
         if (!iterator.moveNext()) return head;
@@ -16,9 +16,9 @@ class TreeNode {
         if (!iterator.moveNext()) return head;
         if (iterator.current != null) newQueue.add(node.right = TreeNode(iterator.current!));
       }
-      if (newQueue.isEmpty) return head;
       queue = newQueue;
     }
+    return head;
   }
 
   int val;
