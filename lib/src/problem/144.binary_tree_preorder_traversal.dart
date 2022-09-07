@@ -33,6 +33,32 @@
 
 import '../structure/tree_node.dart';
 
-class Solution {
-  List<int> preorderTraversal(TreeNode? root) => [];
+class SolutionV1 {
+  List<int> preorderTraversal(TreeNode? root) {
+    final list = <int>[];
+    void visit(TreeNode? node) {
+      if (node == null) return;
+      list.add(node.val);
+      visit(node.left);
+      visit(node.right);
+    }
+
+    visit(root);
+    return list;
+  }
+}
+
+class SolutionV2 {
+  List<int> preorderTraversal(TreeNode? root) {
+    final list = <int>[];
+    void visit(TreeNode? node) {
+      if (node == null) return;
+      list.add(node.val);
+      visit(node.left);
+      visit(node.right);
+    }
+
+    visit(root);
+    return list;
+  }
 }
