@@ -51,27 +51,13 @@ class SolutionV1 {
 class SolutionV2 {
   List<int> preorderTraversal(TreeNode? root) {
     Iterable<int> traversal() sync* {
-      final stack = <TreeNode>[if (root != null) root];
-
-      void pop() => stack.removeLast();
-
-      void detachLeft(TreeNode node) {
-        stack.add(node.left!);
-        node.left = null;
-      }
-
-      void detachRight(TreeNode node) {
-        stack.add(node.right!);
-        node.right = null;
-      }
-
-      for (var prev = 0, next = 1; stack.isNotEmpty; prev = next, next = stack.length) {
-        if (next > prev) yield stack.last.val;
-        if (stack.last.left == null && stack.last.right == null)
-          pop();
-        else if (stack.last.left != null)
-          detachLeft(stack.last);
-        else if (stack.last.right != null) detachRight(stack.last);
+      final stack = <TreeNode>[];
+      TreeNode? maybePop() => stack.isEmpty ? null : stack.removeLast();
+      void maybePush(TreeNode? node) => node == null ? null : stack.add(node);
+      for (var node = root; node != null; node = maybePop()) {
+        yield node.val;
+        maybePush(node.right);
+        maybePush(node.left);
       }
     }
 
