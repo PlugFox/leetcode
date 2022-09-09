@@ -31,16 +31,14 @@
 class Solution {
   List<int> findDisappearedNumbers(List<int> nums) {
     assert(nums.isNotEmpty, 'Array should contains numbers');
-    for (var i = 0; i < nums.length; i++) {
-      final e = nums[i].abs();
+    for (var i = 0, e = 0; i < nums.length; i++) {
+      e = nums[i].abs();
       assert(e > 0, 'Number in array should be greater then 0');
       assert(e <= nums.length, 'Number in array should be lower or equal then ${nums.length}');
       nums[e - 1] = -nums[e - 1].abs();
     }
     final result = <int>[];
-    for (var i = 0; i < nums.length; i++) {
-      nums[i].isNegative ? nums[i] = nums[i].abs() : result.add(i + 1);
-    }
+    for (var i = 0; i < nums.length; i++) nums[i] < 0 ? nums[i] = nums[i].abs() : result.add(i + 1);
     return result;
   }
 }
