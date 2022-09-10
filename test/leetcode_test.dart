@@ -9,6 +9,7 @@ import 'problem/1342.number_of_steps_to_reduce_a_number_to_zero.test.dart'
     as number_of_steps_to_reduce_a_number_to_zero;
 import 'problem/1346.check_if_n_and_its_double_exist.test.dart' as check_if_n_and_its_double_exist;
 import 'problem/144.binary_tree_preorder_traversal.test.dart' as binary_tree_preorder_traversal;
+import 'problem/145.binary_tree_postorder_traversal.test.dart' as binary_tree_postorder_traversal;
 import 'problem/1480.running_sum_of_1d_array.test.dart' as running_sum_of_1d_array;
 import 'problem/1672.richest_customer_wealth.test.dart' as richest_customer_wealth;
 import 'problem/19.remove_nth_node_from_end_of_list.test.dart' as remove_nth_node_from_end_of_list;
@@ -83,5 +84,6 @@ void main() {
     rotate_list.main();
     binary_tree_preorder_traversal.main();
     binary_tree_inorder_traversal.main();
+    binary_tree_postorder_traversal.main();
   });
 }
