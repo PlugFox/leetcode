@@ -68,3 +68,22 @@ class SolutionV2 {
     return traversal().toList();
   }
 }
+
+class SolutionV3 {
+  List<int> inorderTraversal(TreeNode? root) {
+    Iterable<int> traversal() sync* {
+      final stack = <TreeNode>[];
+      for (var node = root; node != null || stack.isNotEmpty;) {
+        while (node != null) {
+          stack.add(node);
+          node = node.left;
+        }
+        node = stack.removeLast();
+        yield node.val;
+        node = node.right;
+      }
+    }
+
+    return traversal().toList();
+  }
+}
