@@ -50,5 +50,27 @@ class SolutionV1 {
 }
 
 class SolutionV2 {
-  List<int> postorderTraversal(TreeNode? root) => SolutionV1().postorderTraversal(root);
+  List<int> postorderTraversal(TreeNode? root) {
+    Iterable<int> traversal() sync* {
+      final stack = <TreeNode>[];
+      for (var node = root; node != null;) {
+        final left = node.left;
+        if (left != null) {
+          stack.add(node..left = null);
+          node = left;
+          continue;
+        }
+        final right = node.right;
+        if (right != null) {
+          stack.add(node..right = null);
+          node = right;
+          continue;
+        }
+        yield node.val;
+        node = stack.isEmpty ? null : stack.removeLast();
+      }
+    }
+
+    return traversal().toList();
+  }
 }
