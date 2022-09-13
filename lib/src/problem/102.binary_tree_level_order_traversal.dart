@@ -34,21 +34,14 @@ import '../structure/tree_node.dart';
 
 class Solution {
   List<List<int>> levelOrder(TreeNode? root) {
-    if (root == null) return [];
-    final result = <List<int>>[];
-    final queue = <TreeNode>[root];
-    for (; queue.isNotEmpty;) {
-      result.add(<int>[]);
-      final nodes = queue.toList();
-      queue.clear();
-      for (final node in nodes) {
-        result.last.add(node.val);
-        queue.addAll(<TreeNode>[
-          if (node.left != null) node.left!,
-          if (node.right != null) node.right!,
-        ]);
+    Iterable<List<int>> traversal() sync* {
+      var queue = <TreeNode>[if (root != null) root];
+      for (var length = queue.length; length != 0; length = queue.length) {
+        yield List<int>.generate(length, (i) => queue[i].val);
+        queue = queue.expand<TreeNode?>((e) => [e.left, e.right]).whereType<TreeNode>().toList(growable: false);
       }
     }
-    return result;
+
+    return traversal().toList();
   }
 }
