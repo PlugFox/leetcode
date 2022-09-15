@@ -1,6 +1,7 @@
 import 'package:test/test.dart';
 
 import 'problem/102.binary_tree_level_order_traversal.test.dart' as binary_tree_level_order_traversal;
+import 'problem/104.maximum_depth_of_binary_tree.test.dart' as maximum_depth_of_binary_tree;
 import 'problem/1051.height_checker.test.dart' as height_checker;
 import 'problem/1089.duplicate_zeros.test.dart' as duplicate_zeros;
 import 'problem/1295.find_numbers_with_even_number_of_digits.test.dart' as find_numbers_with_even_number_of_digits;
@@ -87,5 +88,6 @@ void main() {
     binary_tree_inorder_traversal.main();
     binary_tree_postorder_traversal.main();
     binary_tree_level_order_traversal.main();
+    maximum_depth_of_binary_tree.main();
   });
 }
