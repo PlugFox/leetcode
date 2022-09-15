@@ -29,12 +29,5 @@ import 'dart:math' as math;
 import '../structure/tree_node.dart';
 
 class Solution {
-  int maxDepth(TreeNode? root) {
-    int visit(TreeNode? node, int depth) {
-      if (node == null) return depth;
-      return math.max(visit(node.left, depth + 1), visit(node.right, depth + 1));
-    }
-
-    return visit(root, 0);
-  }
+  int maxDepth(TreeNode? root) => root == null ? 0 : math.max<int>(maxDepth(root.left), maxDepth(root.right)) + 1;
 }
