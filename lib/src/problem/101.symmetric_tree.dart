@@ -44,5 +44,20 @@ class SolutionV1 {
 }
 
 class SolutionV2 {
-  bool isSymmetric(TreeNode? root) => SolutionV1().isSymmetric(root);
+  bool isSymmetric(TreeNode? root) {
+    final stackL = <TreeNode?>[root?.left], stackR = <TreeNode?>[root?.right];
+    for (var i = 0; i < stackL.length; i++) {
+      final l = stackL[i], r = stackR[i];
+      if (l == null && r == null) continue;
+      if (l?.val != r?.val) return false;
+      stackL
+        ..add(l?.left)
+        ..add(l?.right);
+      stackR
+        ..add(r?.right)
+        ..add(r?.left);
+    }
+
+    return true;
+  }
 }
