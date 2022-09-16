@@ -45,15 +45,16 @@ class SolutionV1 {
 
 class SolutionV2 {
   bool isSymmetric(TreeNode? root) {
-    final stackL = <TreeNode?>[root?.left], stackR = <TreeNode?>[root?.right];
-    for (var i = 0; i < stackL.length; i++) {
-      final l = stackL[i], r = stackR[i];
+    final lefty = <TreeNode?>[root?.left], righty = <TreeNode?>[root?.right];
+    TreeNode? pop(List<TreeNode?> list) => list.isEmpty ? null : list.removeLast();
+    while (lefty.isNotEmpty && righty.isNotEmpty) {
+      final l = pop(lefty), r = pop(righty);
       if (l == null && r == null) continue;
       if (l?.val != r?.val) return false;
-      stackL
+      lefty
         ..add(l?.left)
         ..add(l?.right);
-      stackR
+      righty
         ..add(r?.right)
         ..add(r?.left);
     }
