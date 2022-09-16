@@ -1,5 +1,6 @@
 import 'package:test/test.dart';
 
+import 'problem/101.symmetric_tree.test.dart' as symmetric_tree;
 import 'problem/102.binary_tree_level_order_traversal.test.dart' as binary_tree_level_order_traversal;
 import 'problem/104.maximum_depth_of_binary_tree.test.dart' as maximum_depth_of_binary_tree;
 import 'problem/1051.height_checker.test.dart' as height_checker;
@@ -89,5 +90,6 @@ void main() {
     binary_tree_postorder_traversal.main();
     binary_tree_level_order_traversal.main();
     maximum_depth_of_binary_tree.main();
+    symmetric_tree.main();
   });
 }
