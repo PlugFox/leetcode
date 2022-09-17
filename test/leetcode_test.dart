@@ -5,6 +5,7 @@ import 'problem/102.binary_tree_level_order_traversal.test.dart' as binary_tree_
 import 'problem/104.maximum_depth_of_binary_tree.test.dart' as maximum_depth_of_binary_tree;
 import 'problem/1051.height_checker.test.dart' as height_checker;
 import 'problem/1089.duplicate_zeros.test.dart' as duplicate_zeros;
+import 'problem/112.path_sum.test.dart' as path_sum;
 import 'problem/1295.find_numbers_with_even_number_of_digits.test.dart' as find_numbers_with_even_number_of_digits;
 import 'problem/1299.replace_elements_with_greatest_element_on_right_side.test.dart'
     as replace_elements_with_greatest_element_on_right_side;
@@ -91,5 +92,6 @@ void main() {
     binary_tree_level_order_traversal.main();
     maximum_depth_of_binary_tree.main();
     symmetric_tree.main();
+    path_sum.main();
   });
 }
