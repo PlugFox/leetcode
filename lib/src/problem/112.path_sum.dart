@@ -39,8 +39,7 @@ class Solution {
   bool hasPathSum(TreeNode? root, int targetSum) {
     if (root == null) return false;
     targetSum -= root.val;
-    final nodes = <TreeNode?>[root.left, root.right].whereType<TreeNode>().toList();
-    if (nodes.isEmpty) return targetSum == 0;
-    return nodes.any((node) => hasPathSum(node, targetSum));
+    if (root.left == null && root.right == null) return targetSum == 0;
+    return hasPathSum(root.left, targetSum) || hasPathSum(root.right, targetSum);
   }
 }
