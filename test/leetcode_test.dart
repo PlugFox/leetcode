@@ -23,6 +23,7 @@ import 'problem/206.reverse_linked_list.test.dart' as reverse_linked_list;
 import 'problem/21.merge_two_sorted_lists.test.dart' as merge_two_sorted_lists;
 import 'problem/2235.add_two_integers.test.dart' as add_two_integers;
 import 'problem/234.palindrome_linked_list.test.dart' as palindrome_linked_list;
+import 'problem/250.count_univalue_subtrees.test.dart' as count_univalue_subtrees;
 import 'problem/26.remove_duplicates_from_sorted_array.test.dart' as remove_duplicates_from_sorted_array;
 import 'problem/27.remove_element.test.dart' as remove_element;
 import 'problem/283.move_zeroes.test.dart' as move_zeroes;
@@ -93,5 +94,6 @@ void main() {
     maximum_depth_of_binary_tree.main();
     symmetric_tree.main();
     path_sum.main();
+    count_univalue_subtrees.main();
   });
 }
