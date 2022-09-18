@@ -37,9 +37,8 @@ class Solution {
     if (root == null) return 0;
     var count = 0;
     int? visit(TreeNode node) {
-      final left = node.left != null ? visit(node.left!) : node.val;
-      final right = node.right != null ? visit(node.right!) : node.val;
-      if (left != node.val || right != node.val) return null;
+      if ((node.left != null && visit(node.left!) != node.val) | (node.right != null && visit(node.right!) != node.val))
+        return null;
       count++;
       return node.val;
     }
