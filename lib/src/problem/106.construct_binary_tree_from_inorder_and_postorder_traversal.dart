@@ -39,14 +39,11 @@ class Solution {
     assert(inorder.toSet().length == inorder.length);
     assert(postorder.toSet().length == postorder.length);
     if (inorder.isEmpty) return null;
-
-    final inRootIdx = inorder.indexOf(postorder.last);
-    final inLeft = inorder.take(inRootIdx).toList();
-    final inRight = inorder.skip(inRootIdx + 1).toList();
-
-    final postLeft = postorder.take(inLeft.length).toList();
-    final postRight = postorder.skip(inLeft.length).take(inRight.length).toList();
-
-    return TreeNode(postorder.last, buildTree(inLeft, postLeft), buildTree(inRight, postRight));
+    final idx = inorder.indexOf(postorder.last);
+    return TreeNode(
+      postorder.last,
+      buildTree(inorder.sublist(0, idx), postorder.sublist(0, idx)),
+      buildTree(inorder.sublist(idx + 1), postorder.sublist(idx, postorder.length - 1)),
+    );
   }
 }
