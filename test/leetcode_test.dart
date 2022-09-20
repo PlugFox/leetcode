@@ -4,6 +4,8 @@ import 'problem/101.symmetric_tree.test.dart' as symmetric_tree;
 import 'problem/102.binary_tree_level_order_traversal.test.dart' as binary_tree_level_order_traversal;
 import 'problem/104.maximum_depth_of_binary_tree.test.dart' as maximum_depth_of_binary_tree;
 import 'problem/1051.height_checker.test.dart' as height_checker;
+import 'problem/106.construct_binary_tree_from_inorder_and_postorder_traversal.test.dart'
+    as construct_binary_tree_from_inorder_and_postorder_traversal;
 import 'problem/1089.duplicate_zeros.test.dart' as duplicate_zeros;
 import 'problem/112.path_sum.test.dart' as path_sum;
 import 'problem/1295.find_numbers_with_even_number_of_digits.test.dart' as find_numbers_with_even_number_of_digits;
@@ -95,5 +97,6 @@ void main() {
     symmetric_tree.main();
     path_sum.main();
     count_univalue_subtrees.main();
+    construct_binary_tree_from_inorder_and_postorder_traversal.main();
   });
 }

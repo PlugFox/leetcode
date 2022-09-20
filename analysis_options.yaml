@@ -72,6 +72,7 @@ linter:
     use_is_even_rather_than_modulo: false
     curly_braces_in_flow_control_structures: false
     parameter_assignments: false
+    prefer_asserts_with_message: false
 
     # Enabled
     prefer_relative_imports: true
@@ -115,7 +116,6 @@ linter:
     package_names: true
     package_prefixed_library_names: true
     prefer_asserts_in_initializer_lists: true
-    prefer_asserts_with_message: true
     prefer_const_constructors: true
     prefer_const_constructors_in_immutables: true
     prefer_const_declarations: true
